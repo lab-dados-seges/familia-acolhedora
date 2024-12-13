@@ -2,10 +2,10 @@
 format: jb-book
 root: intro
 chapters:
-  - file: caracteristicas_acolhidas
-  - file: fam_acolhedora
-  - file: subsidios_apoios
-  - file: acoes_para_fam_acolhedora
-  - file: caracteristicas_unidades 
-  - file: correlacoes
-  - file: boas_praticas 
+  - file: 1_caracteristicas_acolhidas
+  - file: 2_fam_acolhedora
+  - file: 3_subsidios_apoios
+  - file: 4_acoes_para_fam_acolhedora
+  - file: 5_caracteristicas_unidades 
+  - file: 6_correlacoes
+  - file: 7_boas_praticas 
