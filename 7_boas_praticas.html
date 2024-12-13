@@ -778,79 +778,8 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/compat/_optional.py:135,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/importlib/__init__.py:127,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">127</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1030,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1007,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:984,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;xlrd&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Carregar os dados de município de acordo com o código do IBGE</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df_municipios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;../data/dados_geo/RELATORIO_DTB_BRASIL_MUNICIPIO.xls&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;xlrd&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/io/excel/_base.py:495,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">io</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/io/excel/_base.py:1567,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1564</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
-<span class="g g-Whitespace">   </span><span class="mi">1565</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage_options</span> <span class="o">=</span> <span class="n">storage_options</span>
-<span class="ne">-&gt; </span><span class="mi">1567</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engines</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span>
-<span class="g g-Whitespace">   </span><span class="mi">1568</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_io</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1569</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1570</span>     <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1571</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/io/excel/_xlrd.py:45,</span> in <span class="ni">XlrdReader.__init__</span><span class="nt">(self, filepath_or_buffer, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span><span class="sd"> Reader using xlrd engine.</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     Arbitrary keyword arguments passed to excel engine.</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span> <span class="n">err_msg</span> <span class="o">=</span> <span class="s2">&quot;Install xlrd &gt;= 2.0.1 for xls Excel support&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">45</span> <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;xlrd&quot;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="n">err_msg</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="n">filepath_or_buffer</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/compat/_optional.py:138,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">138</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="k">return</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="c1"># Handle submodules: if we have submodule, grab parent module from sys.modules</span>
-
-<span class="ne">ImportError</span>: Missing optional dependency &#39;xlrd&#39;. Install xlrd &gt;= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING *** OLE2 inconsistency: SSCS size is 0 but SSAT size is non-zero
+*** No CODEPAGE record, no encoding_override: will use &#39;iso-8859-1&#39;
 </pre></div>
 </div>
 </div>
@@ -1384,7 +1313,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(131, 174)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(131, 175)
 </pre></div>
 </div>
 </div>
@@ -1398,7 +1327,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(105, 174)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(105, 175)
 </pre></div>
 </div>
 </div>
@@ -1411,12 +1340,26 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/44/wjzjf_412m1cl66j1pj3b0_00000gn/T/ipykernel_1783/2438098985.py:1: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2066/2438098985.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_pr[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
+/tmp/ipykernel_2066/2438098985.py:1: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_pr[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
-/var/folders/44/wjzjf_412m1cl66j1pj3b0_00000gn/T/ipykernel_1783/2438098985.py:2: SettingWithCopyWarning: 
+/tmp/ipykernel_2066/2438098985.py:2: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_sc[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
+/tmp/ipykernel_2066/2438098985.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -1553,7 +1496,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/91706ae2393dc6d883f064fee30f01e454de4871b902b3d41e73238ec1efd608.png" src="_images/91706ae2393dc6d883f064fee30f01e454de4871b902b3d41e73238ec1efd608.png" />
+<img alt="_images/86e85bfbfc97d991e831ba48bcf81fc86ac5bd0c65a52c42cd09a4e794f83b3f.png" src="_images/86e85bfbfc97d991e831ba48bcf81fc86ac5bd0c65a52c42cd09a4e794f83b3f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1579,7 +1522,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8d38cb1a36543f77cfc34c5f5171a7e47425d3d118460b71044fd1032b4579e9.png" src="_images/8d38cb1a36543f77cfc34c5f5171a7e47425d3d118460b71044fd1032b4579e9.png" />
+<img alt="_images/6619e0486d72a789139dfee6068d87d6865b6f20517c091374a0f946c6a525d4.png" src="_images/6619e0486d72a789139dfee6068d87d6865b6f20517c091374a0f946c6a525d4.png" />
 </div>
 </div>
 </section>
@@ -1620,7 +1563,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/45179f6616e5946439a6ead6d0484ab80825003d3d69d5187e0e3c773cb2fb86.png" src="_images/45179f6616e5946439a6ead6d0484ab80825003d3d69d5187e0e3c773cb2fb86.png" />
+<img alt="_images/e7692a2d8e6b8bbca7db74a65ee91034c72e0f1772d5d4f6368c35bb4c67580f.png" src="_images/e7692a2d8e6b8bbca7db74a65ee91034c72e0f1772d5d4f6368c35bb4c67580f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1658,7 +1601,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ff75d5803855837e52fa51b6d13adf025eebc34fd80b8c0500b1fea76f4a4037.png" src="_images/ff75d5803855837e52fa51b6d13adf025eebc34fd80b8c0500b1fea76f4a4037.png" />
+<img alt="_images/d1367d0b052c71843b26970384955d84ac9e87d36cc0872ad26b670865819a3b.png" src="_images/d1367d0b052c71843b26970384955d84ac9e87d36cc0872ad26b670865819a3b.png" />
 </div>
 </div>
 </section>
@@ -1710,7 +1653,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4d94dc451b7a0c162dde2f1fad2e37147452a377bcc271acd336d3d801db2beb.png" src="_images/4d94dc451b7a0c162dde2f1fad2e37147452a377bcc271acd336d3d801db2beb.png" />
+<img alt="_images/defc96384329d403ed8a7ec0406068791f524fd36cecd3d46aa23c707a10aed5.png" src="_images/defc96384329d403ed8a7ec0406068791f524fd36cecd3d46aa23c707a10aed5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1759,7 +1702,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2c3ed806831ccd07e8985d7c840e02b20f80b2e0b1be0a8af73ec3a9558a902b.png" src="_images/2c3ed806831ccd07e8985d7c840e02b20f80b2e0b1be0a8af73ec3a9558a902b.png" />
+<img alt="_images/0bda00949a7a57b54ec3f8234f7144e094f79b4ab04968a7c71846ecfec127af.png" src="_images/0bda00949a7a57b54ec3f8234f7144e094f79b4ab04968a7c71846ecfec127af.png" />
 </div>
 </div>
 </section>
@@ -1781,54 +1724,6 @@ Name: subsidio_valor_mensal, dtype: float64
 
 <span class="c1"># Alterar os valores NaN para 0</span>
 <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df_pr</span> <span class="o">=</span> <span class="n">df_pr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Corrigir os valores em strings com vírgula para ponto</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Remover espaços em branco (se houver)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-
-<span class="nn">File ~/Library/Python/3.9/lib/python/site-packages/pandas/core/generic.py:5902,</span> in <span class="ni">NDFrame.__getattr__</span><span class="nt">(self, name)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5895</span> <span class="k">if</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">5896</span>     <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_names_set</span>
-<span class="g g-Whitespace">   </span><span class="mi">5897</span>     <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span>
-<span class="g g-Whitespace">   </span><span class="mi">5898</span>     <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessors</span>
-<span class="g g-Whitespace">   </span><span class="mi">5899</span>     <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_info_axis</span><span class="o">.</span><span class="n">_can_hold_identifiers_and_holds_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5900</span> <span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">5901</span>     <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
-<span class="ne">-&gt; </span><span class="mi">5902</span> <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="nn">File ~/Library/Python/3.9/lib/python/site-packages/pandas/core/accessor.py:182,</span> in <span class="ni">CachedAccessor.__get__</span><span class="nt">(self, obj, cls)</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span> <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="c1"># we&#39;re accessing the attribute of the class, i.e., Dataset.geo</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span>
-<span class="ne">--&gt; </span><span class="mi">182</span> <span class="n">accessor_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="c1"># Replace the property with the accessor object. Inspired by:</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span> <span class="c1"># https://www.pydanny.com/cached-property.html</span>
-<span class="g g-Whitespace">    </span><span class="mi">185</span> <span class="c1"># We need to use object.__setattr__ because we overwrite __setattr__ on</span>
-<span class="g g-Whitespace">    </span><span class="mi">186</span> <span class="c1"># NDFrame</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">accessor_obj</span><span class="p">)</span>
-
-<span class="nn">File ~/Library/Python/3.9/lib/python/site-packages/pandas/core/strings/accessor.py:181,</span> in <span class="ni">StringMethods.__init__</span><span class="nt">(self, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="kn">from</span> <span class="nn">pandas.core.arrays.string_</span> <span class="kn">import</span> <span class="n">StringDtype</span>
-<span class="ne">--&gt; </span><span class="mi">181</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_inferred_dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_is_categorical</span> <span class="o">=</span> <span class="n">is_categorical_dtype</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_is_string</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">StringDtype</span><span class="p">)</span>
-
-<span class="nn">File ~/Library/Python/3.9/lib/python/site-packages/pandas/core/strings/accessor.py:235,</span> in <span class="ni">StringMethods._validate</span><span class="nt">(data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="n">inferred_dtype</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">infer_dtype</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">234</span> <span class="k">if</span> <span class="n">inferred_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_types</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">235</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;Can only use .str accessor with string values!&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">return</span> <span class="n">inferred_dtype</span>
-
-<span class="ne">AttributeError</span>: Can only use .str accessor with string values!
 </pre></div>
 </div>
 </div>
@@ -1870,7 +1765,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/eda7c552f18768dac0b5d93853f24e41a9f1a20ba801610dc2af605abfcb4501.png" src="_images/eda7c552f18768dac0b5d93853f24e41a9f1a20ba801610dc2af605abfcb4501.png" />
+<img alt="_images/b4d9c089c3d00766a85bd99615c342e0fbe39d53a98a4ec910a2b4a43df8ed92.png" src="_images/b4d9c089c3d00766a85bd99615c342e0fbe39d53a98a4ec910a2b4a43df8ed92.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1930,7 +1825,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e106e81d427b722bed8fd4a6dff8e954792ad9f98deafb94ef704ce644174981.png" src="_images/e106e81d427b722bed8fd4a6dff8e954792ad9f98deafb94ef704ce644174981.png" />
+<img alt="_images/4cd25903796c6aae886c66e9272f542e2bd7214ddd56388748387badb2405a24.png" src="_images/4cd25903796c6aae886c66e9272f542e2bd7214ddd56388748387badb2405a24.png" />
 </div>
 </div>
 </section>
@@ -1967,7 +1862,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/882ee6f149e95fa3f409a71a4bf4694ade0ddf92fa9f727d0d0f7915e4c2ab88.png" src="_images/882ee6f149e95fa3f409a71a4bf4694ade0ddf92fa9f727d0d0f7915e4c2ab88.png" />
+<img alt="_images/c5a64ce74890502a2dd1c7ab22cdc7ea6d312aebe3d577c845896e83c4d5a446.png" src="_images/c5a64ce74890502a2dd1c7ab22cdc7ea6d312aebe3d577c845896e83c4d5a446.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2001,7 +1896,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5d1b760394028b9c1806e7be62e81c40507427dd22563ca53332ca2cd6727a1b.png" src="_images/5d1b760394028b9c1806e7be62e81c40507427dd22563ca53332ca2cd6727a1b.png" />
+<img alt="_images/b7ff54d36bc651822c29b5e05e586919822ce5107fb77b62d5796230b1268dbd.png" src="_images/b7ff54d36bc651822c29b5e05e586919822ce5107fb77b62d5796230b1268dbd.png" />
 </div>
 </div>
 </section>
@@ -2051,7 +1946,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/61fb0d3d6814318ba5bdac28421a76f78ab96fc963ede3bbc7d0a2269bce78f9.png" src="_images/61fb0d3d6814318ba5bdac28421a76f78ab96fc963ede3bbc7d0a2269bce78f9.png" />
+<img alt="_images/ab825985bdc1d8639f874bd2500edb47f26461f78f85046445ba45195605753a.png" src="_images/ab825985bdc1d8639f874bd2500edb47f26461f78f85046445ba45195605753a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2098,7 +1993,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c16f0f38a0a65bf502d229aece9b776ccc552bafc159f974f62d5da9b038c6a0.png" src="_images/c16f0f38a0a65bf502d229aece9b776ccc552bafc159f974f62d5da9b038c6a0.png" />
+<img alt="_images/8368441d98d662b669367fe276a427afd274d15c138e7b1115b5a217bc7200c6.png" src="_images/8368441d98d662b669367fe276a427afd274d15c138e7b1115b5a217bc7200c6.png" />
 </div>
 </div>
 </section>
