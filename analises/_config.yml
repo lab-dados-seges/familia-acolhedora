@@ -1,0 +1,6 @@
+# _config.yml
+title: "Análise de Dados - Serviço Família Acolhedora"
+author: "Núcleo de Gestão da Informação e do Conhecimento - SEGES/MGI"
+language: "pt"
+execute:
+  execute_notebooks: "auto"  # Executar notebooks automaticamente

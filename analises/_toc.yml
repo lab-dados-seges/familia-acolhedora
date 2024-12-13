@@ -1,0 +1,11 @@
+# _toc.yml
+format: jb-book
+root: intro
+chapters:
+  - file: caracteristicas_acolhidas
+  - file: fam_acolhedora
+  - file: subsidios_apoios
+  - file: acoes_para_fam_acolhedora
+  - file: caracteristicas_unidades 
+  - file: correlacoes
+  - file: boas_praticas 
