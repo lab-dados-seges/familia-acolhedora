@@ -23,7 +23,7 @@ jobs:
           pip install jupyter-book
 
       - name: Build Jupyter Book
-        run: jupyter-book build .
+        run: jupyter-book build ./analises
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
