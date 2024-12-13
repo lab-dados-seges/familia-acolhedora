@@ -1,0 +1,2404 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora &#8212; Análise de Dados - Serviço Família Acolhedora</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_caracteristicas_unidades';</script>
+    <link rel="canonical" href="/familia-acolhedora/5_caracteristicas_unidades.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Correlações lineares entre as variáveis de interesse" href="6_correlacoes.html" />
+    <link rel="prev" title="Variáveis relacionadas à divulgação para captar novas famílias" href="4_acoes_para_fam_acolhedora.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Análise de Dados - Serviço Família Acolhedora</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Análise de dados do Serviço Família Acolhedora
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_caracteristicas_acolhidas.html">Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_fam_acolhedora.html">Variáveis relacionadas às famílias acolhedoras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_subsidios_apoios.html">Variáveis relacionadas a subsídio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_acoes_para_fam_acolhedora.html">Variáveis relacionadas à divulgação para captar novas famílias</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_correlacoes.html">Correlações lineares entre as variáveis de interesse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_boas_praticas.html">Análise de boas práticas no Serviço de Família Acolhedora (SFA)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5_caracteristicas_unidades.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-temporalidade-das-unidades-que-ofertam-o-servico-em-2023">Análise da temporalidade das unidades que ofertam o serviço em 2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-de-implementacao-das-unidades-que-ofertam-o-servico">Data de implementação das unidades que ofertam o serviço</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-de-implementacao-do-servico-nas-unidades">Data de implementação do serviço nas unidades</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-natureza-da-unidade-que-oferta-o-servico">Análise da natureza da unidade que oferta o serviço</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-do-custo-mensal-de-manutencao-do-servico-no-mes-de-setembro-de-2023">Análise do custo mensal de manutenção do serviço no mês de setembro de 2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considerando-os-gastos-com-salarios-aluguel-da-sede-telefone-etc-excluindo-o-valor-dos-subsidios-repassados-as-familias-acolhedoras">Considerando os gastos com salários, aluguel da sede, telefone, etc (EXCLUINDO o valor dos subsídios repassados às famílias acolhedoras)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-estrutura-fisica-do-servico">Análise da estrutura física do serviço</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situacao-do-imovel-onde-funciona-a-sede-do-sfa">Situação do imóvel onde funciona a sede do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-dos-espacos-fisicos-que-compoem-a-sede-do-sfa">Descrição dos espaços físicos que compõem a sede do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-dos-equipamentos-que-compoem-a-sede-do-sfa">Descrição dos equipamentos que compõem a sede do SFA</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-aos-profissonais-do-sfa">Variáveis relacionadas aos profissonais do SFA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusividade-da-equipe-tecnica-do-sfa">Exclusividade da equipe técnica do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitacao-nos-ultimos-12-meses-da-equipe-de-profissionais-do-sfa">Capacitação, nos últimos 12 meses, da equipe de profissionais do SFA</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;folium&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/familia_acolhedora/dados_gerais_tratado.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IBGE</th>
+      <th>NU_IDENTIFICADOR</th>
+      <th>municipio</th>
+      <th>uf</th>
+      <th>data_implementacao_unidade</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>natureza_unidade</th>
+      <th>custo_manutencao</th>
+      <th>servico_regulamentado</th>
+      <th>...</th>
+      <th>coordenador_saf_situacao</th>
+      <th>capaci_equipe_tec_saf_presencial</th>
+      <th>capaci_equipe_tec_saf_ead</th>
+      <th>capaci_equipe_tec_saf_nao_faz</th>
+      <th>capaci_equipe_tec_saf_presencial_qtd</th>
+      <th>capaci_equipe_tec_saf_ead_qtd</th>
+      <th>IBGE7</th>
+      <th>nome_da_uf</th>
+      <th>Regiao</th>
+      <th>Município</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>110011</td>
+      <td>1,10011E+12</td>
+      <td>JARU</td>
+      <td>RO</td>
+      <td>29/03/2023</td>
+      <td>-10.439</td>
+      <td>-62.466</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce concomitantemente a função de coordenad...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1100114</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Jaru</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>110012</td>
+      <td>1,10012E+12</td>
+      <td>JI-PARANA</td>
+      <td>RO</td>
+      <td>02/01/2022</td>
+      <td>-10.876.486.067.028.500</td>
+      <td>-619.596.290.588.379</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Sim</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1100122</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Ji-Paraná</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>110020</td>
+      <td>1,1002E+12</td>
+      <td>PORTO VELHO</td>
+      <td>RO</td>
+      <td>13/12/2017</td>
+      <td>-915.359.258.390.788</td>
+      <td>-643.068.141.967.022</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Sim</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>1100205</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Porto Velho</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>120040</td>
+      <td>1,2004E+12</td>
+      <td>RIO BRANCO</td>
+      <td>AC</td>
+      <td>17/05/2013</td>
+      <td>-9.948.852.227.687.540</td>
+      <td>-6.785.414.814.949.030</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1200401</td>
+      <td>Acre</td>
+      <td>Região Norte</td>
+      <td>Rio Branco</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>130170</td>
+      <td>1,3017E+12</td>
+      <td>HUMAITA</td>
+      <td>AM</td>
+      <td>28/12/2020</td>
+      <td>-7.519.639.784.496.380</td>
+      <td>-63.031.353.950.500.400</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1301704</td>
+      <td>Amazonas</td>
+      <td>Região Norte</td>
+      <td>Humaitá</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 174 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;IBGE&#39;,
+ &#39;NU_IDENTIFICADOR&#39;,
+ &#39;municipio&#39;,
+ &#39;uf&#39;,
+ &#39;data_implementacao_unidade&#39;,
+ &#39;Latitude&#39;,
+ &#39;Longitude&#39;,
+ &#39;natureza_unidade&#39;,
+ &#39;custo_manutencao&#39;,
+ &#39;servico_regulamentado&#39;,
+ &#39;ano_implementacao_servico&#39;,
+ &#39;subsidio_valor_mensal&#39;,
+ &#39;subsidio_itens_manutencao&#39;,
+ &#39;subsidio_mobiliario_transporte&#39;,
+ &#39;subsidio_isencao_imposto_taxa&#39;,
+ &#39;subsidio_outros&#39;,
+ &#39;subsidio_nao_repassa&#39;,
+ &#39;subsidio_outros_quais&#39;,
+ &#39;fam_aceita_vinculo_irmaos&#39;,
+ &#39;qtd_criancas_acolhidas&#39;,
+ &#39;qtd_criancas_acolhidas_12meses&#39;,
+ &#39;qtd_masc_0_2&#39;,
+ &#39;qtd_masc_3_5&#39;,
+ &#39;qtd_masc_6_11&#39;,
+ &#39;qtd_masc_12_13&#39;,
+ &#39;qtd_masc_14_15&#39;,
+ &#39;qtd_masc_16_17&#39;,
+ &#39;qtd_masc_acima_18&#39;,
+ &#39;qtd_masc_total&#39;,
+ &#39;qtd_fem_0_2&#39;,
+ &#39;qtd_fem_3_5&#39;,
+ &#39;qtd_fem_6_11&#39;,
+ &#39;qtd_fem_12_13&#39;,
+ &#39;qtd_fem_14_15&#39;,
+ &#39;qtd_fem_16_17&#39;,
+ &#39;qtd_fem_acima_18&#39;,
+ &#39;qtd_refugiados_imigrantes&#39;,
+ &#39;qtd_venezuelanos&#39;,
+ &#39;qtd_criancas_tempo_servico_menos_1mes&#39;,
+ &#39;qtd_criancas_tempo_servico_1_3meses&#39;,
+ &#39;qtd_criancas_tempo_servico_4_6meses&#39;,
+ &#39;qtd_criancas_tempo_servico_7_12meses&#39;,
+ &#39;qtd_criancas_tempo_servico_13_18meses&#39;,
+ &#39;qtd_criancas_tempo_servico_19_24meses&#39;,
+ &#39;qtd_criancas_tempo_servico_25_48meses&#39;,
+ &#39;qtd_criancas_tempo_servico_49_72meses&#39;,
+ &#39;qtd_criancas_tempo_mais_72meses&#39;,
+ &#39;qtd_criancas_deficiencia&#39;,
+ &#39;qtd_criancas_transt_sofri_psiquico&#39;,
+ &#39;qtd_criancas_necessidade_especial&#39;,
+ &#39;qtd_adoles_socioeducativo&#39;,
+ &#39;qtd_criancas_traj_de_rua&#39;,
+ &#39;qtd_criancas_indigenas&#39;,
+ &#39;qtd_criancas_outros_povos_trad&#39;,
+ &#39;qtd_criancas_dependencia_drogas&#39;,
+ &#39;qtd_criancas_gestantes&#39;,
+ &#39;qtd_criancas_pretas&#39;,
+ &#39;qtd_criancas_pardas&#39;,
+ &#39;qtd_criancas_brancas&#39;,
+ &#39;qtd_criancas_amarelas&#39;,
+ &#39;qtd_criancas_raca_indigenas&#39;,
+ &#39;qtd_motivo_entrega_voluntaria_adocao&#39;,
+ &#39;qtd_motivo_orfandade&#39;,
+ &#39;qtd_motivo_abandono&#39;,
+ &#39;qtd_motivo_pais_usuarios&#39;,
+ &#39;qtd_motivo_pais_com_deficiencia&#39;,
+ &#39;qtd_motivo_pais_transt_sofri_psiquicos&#39;,
+ &#39;qtd_motivo_pais_ausentes_doenca&#39;,
+ &#39;qtd_motivo_pais_prisao_ou_internacao&#39;,
+ &#39;qtd_motivo_violencia_domestica_fisica&#39;,
+ &#39;qtd_motivo_violencia_domestica_psicologica&#39;,
+ &#39;qtd_motivo_abuso_sex_intrafamiliar&#39;,
+ &#39;qtd_motivo_exploracao_sex&#39;,
+ &#39;qtd_motivo_conflito_familiar&#39;,
+ &#39;qtd_motivo_exploracao_trabalho&#39;,
+ &#39;qtd_motivo_pais_cond_especif_saude&#39;,
+ &#39;qtd_motivo_pais_s_condicoes_depend_quim&#39;,
+ &#39;qtd_motivo_ameaca_morte&#39;,
+ &#39;qtd_motivo_situacao_rua&#39;,
+ &#39;qtd_motivo_negligencia_familia&#39;,
+ &#39;qtd_motivo_fam_situacao_rua&#39;,
+ &#39;qtd_motivo_fam_moradia_insalubre&#39;,
+ &#39;qtd_motivo_fam_carencia_rec_materiais&#39;,
+ &#39;qtd_oriundos_pbf&#39;,
+ &#39;qtd_oriundos_fam_menos_1sm&#39;,
+ &#39;divulgacao_outdoors_busdoors&#39;,
+ &#39;divulgacao_materiais_grande_circ&#39;,
+ &#39;divulgacao_radio_tv_impressa&#39;,
+ &#39;divulgacao_eventos_palestras&#39;,
+ &#39;divulgacao_redes_sociais&#39;,
+ &#39;divulgacao_articulacao_liderancas&#39;,
+ &#39;divulgacao_outros&#39;,
+ &#39;divulgacao_nao_faz&#39;,
+ &#39;divulgacao_outros_quais&#39;,
+ &#39;ch_capacitacao_inicial&#39;,
+ &#39;selecao_fam_reunioes&#39;,
+ &#39;selecao_fam_analise_doc&#39;,
+ &#39;selecao_fam_entrevistas&#39;,
+ &#39;selecao_fam_visitas_domiciliares&#39;,
+ &#39;selecao_fam_outros&#39;,
+ &#39;selecao_fam_nao_faz&#39;,
+ &#39;selecao_fam_outros_quais&#39;,
+ &#39;capac_ini_conti_fam_encontros_grupos&#39;,
+ &#39;capac_ini_conti_fam_encontros_indivi&#39;,
+ &#39;capac_ini_conti_fam_paletras&#39;,
+ &#39;capac_ini_conti_fam_rodas_conversa&#39;,
+ &#39;capac_ini_conti_fam_outros&#39;,
+ &#39;capac_ini_conti_fam_nao_faz&#39;,
+ &#39;capac_ini_conti_fam_outros_quais&#39;,
+ &#39;acompanhamento_fam_aprox_supervi&#39;,
+ &#39;acompanhamento_fam_visitas_domicil&#39;,
+ &#39;acompanhamento_fam_aten_psicoss&#39;,
+ &#39;acompanhamento_fam_contato_tel&#39;,
+ &#39;acompanhamento_fam_outros&#39;,
+ &#39;acompanhamento_fam_outros_quais&#39;,
+ &#39;ativi_sistematicas_atend_psicosso_indivi&#39;,
+ &#39;ativi_sistematicas_escuta_qualific&#39;,
+ &#39;ativi_sistematicas_acompanh_escolar&#39;,
+ &#39;ativi_sistematicas_acompanh_saude&#39;,
+ &#39;ativi_sistematicas_encaminhc_docs&#39;,
+ &#39;ativi_sistematicas_encaminhc_qualif_prof&#39;,
+ &#39;ativi_sistematicas_identifi_fam_nat_exten&#39;,
+ &#39;ativi_sistematicas_viabili_encon_fam_ori&#39;,
+ &#39;ativi_sistematicas_constr_plano_acomp_fam_ori&#39;,
+ &#39;ativi_sistematicas_atend_psicosso_indiv_fam_ori&#39;,
+ &#39;ativi_sistematicas_reunioes_fam_ori&#39;,
+ &#39;ativi_sistematicas_entrevis_fam_ori&#39;,
+ &#39;ativi_sistematicas_visi_domic_fam_ori&#39;,
+ &#39;ativi_sistematicas_genograma_ecomapa&#39;,
+ &#39;ativi_sistematicas_relat_trimes_judic&#39;,
+ &#39;ativi_sistematicas_estudo_caso&#39;,
+ &#39;ativi_sistematicas_encaminhc_rede&#39;,
+ &#39;ativi_sistematicas_discuss_casos_rede&#39;,
+ &#39;ativi_sistematicas_outros&#39;,
+ &#39;ativi_sistematicas_nao_faz&#39;,
+ &#39;ativi_sistematicas_outros_quais&#39;,
+ &#39;retorno_fam_ori_fam_ado_judic_informa_decisoes&#39;,
+ &#39;retorno_fam_ori_fam_ado_judic_nao_informa_decisoes&#39;,
+ &#39;retorno_fam_ori_fam_ado_tempo_prepar_suficiente&#39;,
+ &#39;retorno_fam_ori_fam_ado_tempo_prepar_insuficiente&#39;,
+ &#39;freq_acompanh_fam_acolhedora&#39;,
+ &#39;qtd_fam_processo_habilitacao&#39;,
+ &#39;qtd_fam_aptas_ou_acolhendo&#39;,
+ &#39;num_atual_fam_suficiente&#39;,
+ &#39;imovel_sede_saf&#39;,
+ &#39;espaco_fisico_sala_atendimento&#39;,
+ &#39;espaco_fisico_espaco_reunioes&#39;,
+ &#39;espaco_fisico_sala_equip_tec&#39;,
+ &#39;espaco_fisico_sala_coord_adm&#39;,
+ &#39;espaco_fisico_area_recepcao&#39;,
+ &#39;espaco_fisico_copa&#39;,
+ &#39;equipamentos_veiculo_exclusivo&#39;,
+ &#39;equipamentos_veiculo_compartilhado&#39;,
+ &#39;equipamentos_acervo_bibliog&#39;,
+ &#39;equipamentos_mater_pedago&#39;,
+ &#39;equipamentos_tel_fixo&#39;,
+ &#39;equipamentos_cel&#39;,
+ &#39;equipamentos_impressora&#39;,
+ &#39;equipamentos_de_som&#39;,
+ &#39;equipamentos_proj_imagens&#39;,
+ &#39;equipamentos_bebedouro&#39;,
+ &#39;equipamentos_comput_internet&#39;,
+ &#39;equipamentos_qtd_comput_internet&#39;,
+ &#39;equipe_tec_exclusiva_saf&#39;,
+ &#39;coordenador_saf_situacao&#39;,
+ &#39;capaci_equipe_tec_saf_presencial&#39;,
+ &#39;capaci_equipe_tec_saf_ead&#39;,
+ &#39;capaci_equipe_tec_saf_nao_faz&#39;,
+ &#39;capaci_equipe_tec_saf_presencial_qtd&#39;,
+ &#39;capaci_equipe_tec_saf_ead_qtd&#39;,
+ &#39;IBGE7&#39;,
+ &#39;nome_da_uf&#39;,
+ &#39;Regiao&#39;,
+ &#39;Município&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_municipios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/dados_geo/municipios.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_municipios</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>codigo_ibge</th>
+      <th>nome</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>capital</th>
+      <th>codigo_uf</th>
+      <th>siafi_id</th>
+      <th>ddd</th>
+      <th>fuso_horario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5200050</td>
+      <td>Abadia de Goiás</td>
+      <td>-16.75730</td>
+      <td>-49.4412</td>
+      <td>0</td>
+      <td>52</td>
+      <td>1050</td>
+      <td>62</td>
+      <td>America/Sao_Paulo</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3100104</td>
+      <td>Abadia dos Dourados</td>
+      <td>-18.48310</td>
+      <td>-47.3916</td>
+      <td>0</td>
+      <td>31</td>
+      <td>4001</td>
+      <td>34</td>
+      <td>America/Sao_Paulo</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5200100</td>
+      <td>Abadiânia</td>
+      <td>-16.19700</td>
+      <td>-48.7057</td>
+      <td>0</td>
+      <td>52</td>
+      <td>9201</td>
+      <td>62</td>
+      <td>America/Sao_Paulo</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3100203</td>
+      <td>Abaeté</td>
+      <td>-19.15510</td>
+      <td>-45.4444</td>
+      <td>0</td>
+      <td>31</td>
+      <td>4003</td>
+      <td>37</td>
+      <td>America/Sao_Paulo</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1500107</td>
+      <td>Abaetetuba</td>
+      <td>-1.72183</td>
+      <td>-48.8788</td>
+      <td>0</td>
+      <td>15</td>
+      <td>401</td>
+      <td>91</td>
+      <td>America/Sao_Paulo</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_municipios</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;codigo_ibge&#39;, &#39;nome&#39;, &#39;latitude&#39;, &#39;longitude&#39;, &#39;capital&#39;, &#39;codigo_uf&#39;,
+       &#39;siafi_id&#39;, &#39;ddd&#39;, &#39;fuso_horario&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Realizar o merge entre os DataFrames</span>
+<span class="n">df_municipios_dados_gerais_fam</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">df_dados_gerais</span><span class="p">,</span>
+    <span class="n">df_municipios</span><span class="p">[[</span><span class="s1">&#39;codigo_ibge&#39;</span><span class="p">,</span> <span class="s1">&#39;nome&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;codigo_uf&#39;</span><span class="p">,</span><span class="s1">&#39;siafi_id&#39;</span><span class="p">]],</span>
+    <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;IBGE7&#39;</span><span class="p">,</span>
+    <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;codigo_ibge&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_municipios_dados_gerais_fam</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IBGE</th>
+      <th>NU_IDENTIFICADOR</th>
+      <th>municipio</th>
+      <th>uf</th>
+      <th>data_implementacao_unidade</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>natureza_unidade</th>
+      <th>custo_manutencao</th>
+      <th>servico_regulamentado</th>
+      <th>...</th>
+      <th>IBGE7</th>
+      <th>nome_da_uf</th>
+      <th>Regiao</th>
+      <th>Município</th>
+      <th>codigo_ibge</th>
+      <th>nome</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>codigo_uf</th>
+      <th>siafi_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>110011</td>
+      <td>1,10011E+12</td>
+      <td>JARU</td>
+      <td>RO</td>
+      <td>29/03/2023</td>
+      <td>-10.439</td>
+      <td>-62.466</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>1100114</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Jaru</td>
+      <td>1100114</td>
+      <td>Jaru</td>
+      <td>-10.43180</td>
+      <td>-62.4788</td>
+      <td>11</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>110012</td>
+      <td>1,10012E+12</td>
+      <td>JI-PARANA</td>
+      <td>RO</td>
+      <td>02/01/2022</td>
+      <td>-10.876.486.067.028.500</td>
+      <td>-619.596.290.588.379</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>1100122</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Ji-Paraná</td>
+      <td>1100122</td>
+      <td>Ji-Paraná</td>
+      <td>-10.87770</td>
+      <td>-61.9322</td>
+      <td>11</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>110020</td>
+      <td>1,1002E+12</td>
+      <td>PORTO VELHO</td>
+      <td>RO</td>
+      <td>13/12/2017</td>
+      <td>-915.359.258.390.788</td>
+      <td>-643.068.141.967.022</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>1100205</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Porto Velho</td>
+      <td>1100205</td>
+      <td>Porto Velho</td>
+      <td>-8.76077</td>
+      <td>-63.8999</td>
+      <td>11</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>120040</td>
+      <td>1,2004E+12</td>
+      <td>RIO BRANCO</td>
+      <td>AC</td>
+      <td>17/05/2013</td>
+      <td>-9.948.852.227.687.540</td>
+      <td>-6.785.414.814.949.030</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>1200401</td>
+      <td>Acre</td>
+      <td>Região Norte</td>
+      <td>Rio Branco</td>
+      <td>1200401</td>
+      <td>Rio Branco</td>
+      <td>-9.97499</td>
+      <td>-67.8243</td>
+      <td>12</td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>130170</td>
+      <td>1,3017E+12</td>
+      <td>HUMAITA</td>
+      <td>AM</td>
+      <td>28/12/2020</td>
+      <td>-7.519.639.784.496.380</td>
+      <td>-63.031.353.950.500.400</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>1301704</td>
+      <td>Amazonas</td>
+      <td>Região Norte</td>
+      <td>Humaitá</td>
+      <td>1301704</td>
+      <td>Humaitá</td>
+      <td>-7.51171</td>
+      <td>-63.0327</td>
+      <td>13</td>
+      <td>235</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 180 columns</p>
+</div></div></div>
+</div>
+<section id="analise-da-distribuicao-geografica-das-unidades-de-acolhimento-que-oferecem-o-servico-de-familia-acolhedora">
+<h1>Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora<a class="headerlink" href="#analise-da-distribuicao-geografica-das-unidades-de-acolhimento-que-oferecem-o-servico-de-familia-acolhedora" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_agrupado</span> <span class="o">=</span> <span class="n">df_municipios_dados_gerais_fam</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;IBGE7&#39;</span><span class="p">,</span> <span class="s1">&#39;Município&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;QuantidadeServicos&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obter coordenadas únicas por IBGE e Município</span>
+<span class="n">coordenadas</span> <span class="o">=</span> <span class="n">df_municipios_dados_gerais_fam</span><span class="p">[[</span><span class="s1">&#39;IBGE7&#39;</span><span class="p">,</span> <span class="s1">&#39;Município&#39;</span><span class="p">,</span> <span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+
+<span class="c1"># Mesclar as coordenadas com os dados agrupados</span>
+<span class="n">df_agrupado</span> <span class="o">=</span> <span class="n">df_agrupado</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">coordenadas</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;IBGE7&#39;</span><span class="p">,</span> <span class="s1">&#39;Município&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o mapa centralizado</span>
+<span class="n">mapa_servicos</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">df_agrupado</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">df_agrupado</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()],</span>
+    <span class="n">zoom_start</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;CartoDB positron&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar marcadores para cada município</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df_agrupado</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">popup_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Município: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Município&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;br&gt;Quantidade de SAF: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;QuantidadeServicos&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="n">popup_text</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">mapa_servicos</span><span class="p">)</span>
+
+<span class="c1"># Exibir o mapa</span>
+<span class="n">mapa_servicos</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analise-da-temporalidade-das-unidades-que-ofertam-o-servico-em-2023">
+<h1>Análise da temporalidade das unidades que ofertam o serviço em 2023<a class="headerlink" href="#analise-da-temporalidade-das-unidades-que-ofertam-o-servico-em-2023" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;data_implementacao_unidade&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;data_implementacao_unidade&#39;</span><span class="p">],</span> 
+    <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">,</span>  <span class="c1"># Define explicitamente o formato</span>
+    <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span>  <span class="c1"># Transforma valores inválidos em NaT</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;ano_implementacao_servico&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      2023
+1      2022
+2      2018
+3      2013
+4      2021
+       ... 
+615    2016
+616    2016
+617    2021
+618    2007
+619    2018
+Name: ano_implementacao_servico, Length: 620, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<section id="data-de-implementacao-das-unidades-que-ofertam-o-servico">
+<h2>Data de implementação das unidades que ofertam o serviço<a class="headerlink" href="#data-de-implementacao-das-unidades-que-ofertam-o-servico" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contar implementações cumulativas ao longo do tempo</span>
+<span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;ano_implementacao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;data_implementacao_unidade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">serie_temporal</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ano_implementacao&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+
+<span class="c1"># Plotar</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">serie_temporal</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">serie_temporal</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Número Cumulativo de Implementações ao Longo do Tempo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ano&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Unidades Implementadas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/40a1afcb02b92406d81584c19873bcdd8e45d3989d56ae83771dbbe1b8203ff5.png" src="_images/40a1afcb02b92406d81584c19873bcdd8e45d3989d56ae83771dbbe1b8203ff5.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contar implementações por década</span>
+<span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;decada&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;data_implementacao_unidade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">implementacoes_decada</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;decada&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+<span class="c1"># Plotar</span>
+<span class="n">implementacoes_decada</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Implementações por Década&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Década&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Unidades&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/54783e06459d880af6c20bc9737cef46dc3e35d160a96641f957c81645a478b8.png" src="_images/54783e06459d880af6c20bc9737cef46dc3e35d160a96641f957c81645a478b8.png" />
+</div>
+</div>
+</section>
+<section id="data-de-implementacao-do-servico-nas-unidades">
+<h2>Data de implementação do serviço nas unidades<a class="headerlink" href="#data-de-implementacao-do-servico-nas-unidades" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contar implementações cumulativas ao longo do tempo</span>
+<span class="n">serie_temporal</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ano_implementacao_servico&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">serie_temporal</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">serie_temporal</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Número Cumulativo de Implementações do Serviço ao Longo do Tempo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ano&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Implementação do Serviço&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">serie_temporal</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>  <span class="c1"># Rotaciona os rótulos do eixo X</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/76bdf5cadf9f6817c2536e231cf064e07c17796e051f2ca7beba1f3d63e0b10e.png" src="_images/76bdf5cadf9f6817c2536e231cf064e07c17796e051f2ca7beba1f3d63e0b10e.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="analise-da-natureza-da-unidade-que-oferta-o-servico">
+<h1>Análise da natureza da unidade que oferta o serviço<a class="headerlink" href="#analise-da-natureza-da-unidade-que-oferta-o-servico" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_municipios_dados_gerais_fam</span><span class="p">[</span><span class="s1">&#39;natureza_unidade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Governamental                                       568
+Não Governamental/Organização da Sociedade Civil     41
+Name: natureza_unidade, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">natureza_unidade</span> <span class="o">=</span> <span class="n">df_municipios_dados_gerais_fam</span><span class="p">[</span>
+    <span class="n">df_municipios_dados_gerais_fam</span><span class="p">[</span><span class="s1">&#39;natureza_unidade&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Não Governamental/Organização da Sociedade Civil&#39;</span>
+<span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;uf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_natureza_unidade</span> <span class="o">=</span> <span class="n">natureza_unidade</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_natureza_unidade</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uf</th>
+      <th>contagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AM</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>DF</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>MG</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PE</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PI</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>PR</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>RS</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>SC</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>SP</td>
+      <td>23</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="analise-do-custo-mensal-de-manutencao-do-servico-no-mes-de-setembro-de-2023">
+<h1>Análise do custo mensal de manutenção do serviço no mês de setembro de 2023<a class="headerlink" href="#analise-do-custo-mensal-de-manutencao-do-servico-no-mes-de-setembro-de-2023" title="Link to this heading">#</a></h1>
+<section id="considerando-os-gastos-com-salarios-aluguel-da-sede-telefone-etc-excluindo-o-valor-dos-subsidios-repassados-as-familias-acolhedoras">
+<h2>Considerando os gastos com salários, aluguel da sede, telefone, etc (EXCLUINDO o valor dos subsídios repassados às famílias acolhedoras)<a class="headerlink" href="#considerando-os-gastos-com-salarios-aluguel-da-sede-telefone-etc-excluindo-o-valor-dos-subsidios-repassados-as-familias-acolhedoras" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define cores para cada região</span>
+<span class="n">cores_regiao</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Região Norte&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Nordeste&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Centro Oeste&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Região Sudeste&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Sul&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>582
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([nan, &#39;20439,53&#39;, &#39;10000&#39;, &#39;115428,62&#39;, &#39;29531,09&#39;, &#39;10685,43&#39;,
+       &#39;44365,81&#39;, &#39;24051,26&#39;, &#39;8714,9&#39;, &#39;108321&#39;, &#39;16933&#39;, &#39;13750&#39;,
+       &#39;186177,25&#39;, &#39;50504,6&#39;, &#39;73232,9&#39;, &#39;31120,18&#39;, &#39;33793,75&#39;, &#39;39000&#39;,
+       &#39;32306,42&#39;, &#39;7553,22&#39;, &#39;39684,01&#39;, &#39;40000&#39;, &#39;24590&#39;, &#39;39690,92&#39;,
+       &#39;0&#39;, &#39;24436,82&#39;, &#39;61566,45&#39;, &#39;55329,74&#39;, &#39;64294,53&#39;, &#39;42831,88&#39;,
+       &#39;46477,93&#39;, &#39;15538,98&#39;, &#39;20330,64&#39;, &#39;21000&#39;, &#39;50688,5&#39;, &#39;28656,79&#39;,
+       &#39;22580,51&#39;, &#39;26453,97&#39;, &#39;29300,42&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remover espaços em branco (se houver)</span>
+<span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcula a média de custo de manutenção do serviço por UF</span>
+<span class="n">media_custo_uf</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;Regiao&#39;</span><span class="p">])[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_custo_uf</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>uf                  0
+Regiao              0
+custo_manutencao    0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_custo_uf</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uf</th>
+      <th>Regiao</th>
+      <th>custo_manutencao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>22</th>
+      <td>SP</td>
+      <td>Região Sudeste</td>
+      <td>16827.074035</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>MG</td>
+      <td>Região Sudeste</td>
+      <td>3553.105312</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AM</td>
+      <td>Região Norte</td>
+      <td>2919.932857</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>PE</td>
+      <td>Região Nordeste</td>
+      <td>1250.000000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>PR</td>
+      <td>Região Sul</td>
+      <td>765.994580</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>RS</td>
+      <td>Região Sul</td>
+      <td>751.292821</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>SC</td>
+      <td>Região Sul</td>
+      <td>466.995048</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>AC</td>
+      <td>Região Norte</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>PB</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>RO</td>
+      <td>Região Norte</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>RN</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>RJ</td>
+      <td>Região Sudeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PI</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>PA</td>
+      <td>Região Norte</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MT</td>
+      <td>Região Centro Oeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>MS</td>
+      <td>Região Centro Oeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>MA</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>GO</td>
+      <td>Região Centro Oeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ES</td>
+      <td>Região Sudeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DF</td>
+      <td>Região Centro Oeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CE</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BA</td>
+      <td>Região Nordeste</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AP</td>
+      <td>Região Norte</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>TO</td>
+      <td>Região Norte</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove valores onde custo_manutencao é igual a 0</span>
+<span class="n">df_filtrado_custo</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Calcula a média de custo de manutenção do serviço por UF, excluindo os valores 0</span>
+<span class="n">media_custo_municipio</span> <span class="o">=</span> <span class="n">df_filtrado_custo</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;Município&#39;</span><span class="p">])[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Exibe o resultado</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">media_custo_municipio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    uf              Município  custo_manutencao
+0   AM                 Manaus         20439.530
+1   MG         Belo Horizonte        115428.620
+2   MG                  Betim         29531.090
+3   MG            Divinópolis         10685.430
+4   MG          Imbé de Minas         44365.810
+5   MG           Juiz de Fora         24051.260
+6   MG        Poços de Caldas          8714.900
+7   MG             Uberlândia        108321.000
+8   PE                 Olinda         10000.000
+9   PR               Curitiba         21000.000
+10  PR          Foz do Iguaçu         50688.500
+11  PR               Londrina         28656.790
+12  RS           Porto Alegre         29300.420
+13  SC                Caçador         22580.510
+14  SC          Florianópolis         26453.970
+15  SP              Americana         16933.000
+16  SP                Atibaia         13750.000
+17  SP                  Bauru        118340.925
+18  SP               Campinas         73232.900
+19  SP               Capivari         31120.180
+20  SP                 Franca         33793.750
+21  SP              Guarulhos         39000.000
+22  SP             Indaiatuba         32306.420
+23  SP                   Lins          7553.220
+24  SP             Piracicaba         39684.010
+25  SP    Presidente Prudente         40000.000
+26  SP         Ribeirão Preto         24590.000
+27  SP                 Sumaré         15538.980
+28  SP  São José do Rio Preto         39690.920
+29  SP              São Paulo         49156.225
+30  SP               Valinhos         20330.640
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selecionar os municípios com maiores custos (Top 10)</span>
+<span class="n">top_custos</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;custo_manutencao&#39;</span><span class="p">)</span>
+
+<span class="c1"># Criar o gráfico de dispersão</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_dados_gerais</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos aos maiores custos</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">top_custos</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">],</span>  <span class="c1"># Coordenada X</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;custo_manutencao&#39;</span><span class="p">],</span>  <span class="c1"># Coordenada Y</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;municipio&#39;</span><span class="p">],</span>  <span class="c1"># Texto (nome do município)</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
+        <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;semibold&#39;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Configurar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Custo de Manutenção em Função da Quantidade de Crianças e Adolescentes Acolhidas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de Crianças e Adolescentes Acolhidas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Custo de Manutenção (R$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/045c965591fd7f779b87adb7a23efa417a2ba9d018af753274d2d2691f54f1c7.png" src="_images/045c965591fd7f779b87adb7a23efa417a2ba9d018af753274d2d2691f54f1c7.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="analise-da-estrutura-fisica-do-servico">
+<h1>Análise da estrutura física do serviço<a class="headerlink" href="#analise-da-estrutura-fisica-do-servico" title="Link to this heading">#</a></h1>
+<p>A variável ‘imovel_sede_saf’ refere-se à situação do imóvel onde funciona a Sede do Serviço de Família Acolhedora - SFA.</p>
+<p>As seguintes variáveis estão relacionadas aos espaços físicos que compõem a sede do SFA:</p>
+<ul class="simple">
+<li><p>‘espaco_fisico_sala_atendimento’: Sala para atendimento</p></li>
+<li><p>‘espaco_fisico_espaco_reunioes’: Sala/espaço para reuniões</p></li>
+<li><p>‘espaco_fisico_sala_equip_tec’: Sala para equipe técnica</p></li>
+<li><p>‘espaco_fisico_sala_coord_adm’: Sala para coordenação / atividades administrativas</p></li>
+<li><p>‘espaco_fisico_area_recepcao’: Área de recepção</p></li>
+<li><p>‘espaco_fisico_copa’: Copa</p></li>
+</ul>
+<p>As seguintes variáveis indicam os equipamentos e materiais, em perfeito funcionamento, à disposição deste serviço:</p>
+<ul class="simple">
+<li><p>‘equipamentos_veiculo_exclusivo’: Veículo de uso exclusivo</p></li>
+<li><p>‘equipamentos_veiculo_compartilhado’: Veículo de uso compartilhado</p></li>
+<li><p>‘equipamentos_acervo_bibliog’: Acervo bibliográfico (livros)</p></li>
+<li><p>‘equipamentos_mater_pedago’: Materiais pedagógicos, jogos, brinquedos</p></li>
+<li><p>‘equipamentos_tel_fixo’: Telefone fixo</p></li>
+<li><p>‘equipamentos_cel’: Celular</p></li>
+<li><p>‘equipamentos_impressora’: Impressora</p></li>
+<li><p>‘equipamentos_de_som’: Equipamento de som</p></li>
+<li><p>‘equipamentos_proj_imagens’: Equipamento de projeção de imagens</p></li>
+<li><p>‘equipamentos_bebedouro’: Bebedouro e/ou filtro</p></li>
+<li><p>‘equipamentos_comput_internet’: Computadores ligados à Internet</p></li>
+<li><p>‘equipamentos_qtd_comput_internet’: Quantidade de computadores ligados à Internet</p></li>
+</ul>
+<section id="situacao-do-imovel-onde-funciona-a-sede-do-sfa">
+<h2>Situação do imóvel onde funciona a sede do SFA<a class="headerlink" href="#situacao-do-imovel-onde-funciona-a-sede-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;imovel_sede_saf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Imóvel compartilhado com outro serviço ou órgão    317
+Imóvel exclusivo para o SFA                        104
+Imóvel compartilhado com CREAS                     102
+Imóvel compartilhado com CRAS                       64
+O SFA não possui sede                               33
+Name: imovel_sede_saf, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;imovel_sede_saf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;O&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupa os dados por &#39;uf&#39; e &#39;imovel_sede_saf&#39; e conta as ocorrências</span>
+<span class="n">contagem_por_uf_sede</span><span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;imovel_sede_saf&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_por_uf_sede</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uf</th>
+      <th>imovel_sede_saf</th>
+      <th>contagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AC</td>
+      <td>Imóvel exclusivo para o SFA</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AM</td>
+      <td>Imóvel compartilhado com CREAS</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AM</td>
+      <td>Imóvel compartilhado com outro serviço ou órgão</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AM</td>
+      <td>O SFA não possui sede</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AP</td>
+      <td>Imóvel compartilhado com CRAS</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>SP</td>
+      <td>Imóvel compartilhado com outro serviço ou órgão</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>SP</td>
+      <td>Imóvel exclusivo para o SFA</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>SP</td>
+      <td>O SFA não possui sede</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>TO</td>
+      <td>Imóvel compartilhado com outro serviço ou órgão</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>TO</td>
+      <td>Imóvel exclusivo para o SFA</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transformar o DataFrame para o formato de tabela cruzada</span>
+<span class="n">grafico_data_sede</span> <span class="o">=</span> <span class="n">contagem_por_uf_sede</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;imovel_sede_saf&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o gráfico de barras empilhadas</span>
+<span class="n">grafico_data_sede</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Situação de imóvel do SFA por UF&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos ao gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Contagem&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;UF&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Situação de Imóvel&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6c0c1bbc0b618f93aa94645028923433a94d436b5faa3c489a158e76f9b2ccb0.png" src="_images/6c0c1bbc0b618f93aa94645028923433a94d436b5faa3c489a158e76f9b2ccb0.png" />
+</div>
+</div>
+</section>
+<section id="descricao-dos-espacos-fisicos-que-compoem-a-sede-do-sfa">
+<h2>Descrição dos espaços físicos que compõem a sede do SFA<a class="headerlink" href="#descricao-dos-espacos-fisicos-que-compoem-a-sede-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colunas_espaco_fisico</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;espaco_fisico_sala_atendimento&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;espaco_fisico_espaco_reunioes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;espaco_fisico_sala_equip_tec&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;espaco_fisico_sala_coord_adm&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;espaco_fisico_area_recepcao&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;espaco_fisico_copa&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">colunas_espaco_fisico</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>espaco_fisico_sala_atendimento    0
+espaco_fisico_espaco_reunioes     0
+espaco_fisico_sala_equip_tec      0
+espaco_fisico_sala_coord_adm      0
+espaco_fisico_area_recepcao       0
+espaco_fisico_copa                0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_espaco_fisico</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">coluna</span><span class="p">:</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">colunas_espaco_fisico</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_espaco_fisico</span> <span class="o">=</span> <span class="n">contagem_espaco_fisico</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">contagem_espaco_fisico</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Exibir os valores dentro do heatmap</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.0f&quot;</span><span class="p">,</span>   <span class="c1"># Formato dos números</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Reds&quot;</span><span class="p">,</span>  <span class="c1"># Escolha da paleta de cores</span>
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Contagem&#39;</span><span class="p">}</span>  <span class="c1"># Rótulo da barra de cores</span>
+<span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribuição dos espaços físicos&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Resposta&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Espaço Físico&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/83ed5e85e5a243344645cbbeb85a2755db0f519bca285665213262766fc1bbdc.png" src="_images/83ed5e85e5a243344645cbbeb85a2755db0f519bca285665213262766fc1bbdc.png" />
+</div>
+</div>
+</section>
+<section id="descricao-dos-equipamentos-que-compoem-a-sede-do-sfa">
+<h2>Descrição dos equipamentos que compõem a sede do SFA<a class="headerlink" href="#descricao-dos-equipamentos-que-compoem-a-sede-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colunas_equipamentos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;equipamentos_veiculo_exclusivo&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_veiculo_compartilhado&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_acervo_bibliog&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_mater_pedago&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_tel_fixo&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_cel&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_impressora&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_de_som&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_proj_imagens&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_bebedouro&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;equipamentos_comput_internet&#39;</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">colunas_equipamentos</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>equipamentos_veiculo_exclusivo        0
+equipamentos_veiculo_compartilhado    0
+equipamentos_acervo_bibliog           0
+equipamentos_mater_pedago             0
+equipamentos_tel_fixo                 0
+equipamentos_cel                      0
+equipamentos_impressora               0
+equipamentos_de_som                   0
+equipamentos_proj_imagens             0
+equipamentos_bebedouro                0
+equipamentos_comput_internet          0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_equipamentos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">coluna</span><span class="p">:</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">colunas_equipamentos</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_equipamentos</span> <span class="o">=</span> <span class="n">contagem_equipamentos</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">contagem_equipamentos</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Exibir os valores dentro do heatmap</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.0f&quot;</span><span class="p">,</span>   <span class="c1"># Formato dos números</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span>  <span class="c1"># Escolha da paleta de cores</span>
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Contagem&#39;</span><span class="p">}</span>  <span class="c1"># Rótulo da barra de cores</span>
+<span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribuição dos espaços físicos&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Resposta&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Espaço Físico&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/520abc2d43f55a1f20358b0c39a7b09078fa5a8475861bb4c881e149fb46abfa.png" src="_images/520abc2d43f55a1f20358b0c39a7b09078fa5a8475861bb4c881e149fb46abfa.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="variaveis-relacionadas-aos-profissonais-do-sfa">
+<h1>Variáveis relacionadas aos profissonais do SFA<a class="headerlink" href="#variaveis-relacionadas-aos-profissonais-do-sfa" title="Link to this heading">#</a></h1>
+<p>A variável ‘equipe_tec_exclusiva_saf’ refere-se à exclusividade da equipe técnica que trabalha com o SFA. Já a ‘coordenador_saf_situacao’ refere-se à situação do coordenador do SAF.</p>
+<p>As seguintes variáveis referem-se à participação, nos últimos 12 meses, das(os) profissionais do serviço em capacitação sobre o Serviço de Acolhimento em Família Acolhedora ou sobre temas relativos a crianças e adolescentes:</p>
+<ul class="simple">
+<li><p>‘capaci_equipe_tec_saf_presencial’: Sim, capacitação presencial</p></li>
+<li><p>‘capaci_equipe_tec_saf_ead’: Sim, capacitação à distância</p></li>
+<li><p>‘capaci_equipe_tec_saf_nao_faz’: Não</p></li>
+<li><p>‘capaci_equipe_tec_saf_presencial_qtd’: Quantidade de profissionais na capacitação presencial</p></li>
+<li><p>‘capaci_equipe_tec_saf_ead_qtd’: Quantidade de profissionais na capacitação EaD</p></li>
+</ul>
+<section id="exclusividade-da-equipe-tecnica-do-sfa">
+<h2>Exclusividade da equipe técnica do SFA<a class="headerlink" href="#exclusividade-da-equipe-tecnica-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;equipe_tec_exclusiva_saf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Não há profissionais exclusivas(os) do serviço    309
+Todas(os) as(os) profissionais são exclusivos     225
+Parte da equipe é exclusiva                        79
+Não há equipe técnica neste Serviço                 7
+Name: equipe_tec_exclusiva_saf, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupa os dados por &#39;uf&#39; e &#39;equipe_tec_exclusiva_saf&#39; e conta as ocorrências</span>
+<span class="n">contagem_por_uf_equipe</span><span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;equipe_tec_exclusiva_saf&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transformar o DataFrame para o formato de tabela cruzada</span>
+<span class="n">grafico_data_equipe</span> <span class="o">=</span> <span class="n">contagem_por_uf_equipe</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;equipe_tec_exclusiva_saf&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o gráfico de barras empilhadas</span>
+<span class="n">grafico_data_equipe</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exclusividade ou não do SFA&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos ao gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Contagem&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Situação da equipe&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0b73070660468fb9e8c4c502c35bd10c0e03d7ac05c6632f62a7f3a3ff08ba0f.png" src="_images/0b73070660468fb9e8c4c502c35bd10c0e03d7ac05c6632f62a7f3a3ff08ba0f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;coordenador_saf_situacao&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exerce exclusivamente a função de coordenador(a) deste serviço                                            172
+Exerce concomitantemente a função de coordenador(a) deste serviço e de outro serviço socioassistencial    160
+Acumula as funções de coordenadora(or) e de técnica(o) neste serviço                                      102
+Acumula as funções de coordenadora(or) com outra atividade                                                 99
+Não há coordenadora(or) neste serviço                                                                      87
+Name: coordenador_saf_situacao, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupa os dados por &#39;uf&#39; e &#39;coordenador_saf_situacao&#39; e conta as ocorrências</span>
+<span class="n">contagem_por_uf_coordenador</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;coordenador_saf_situacao&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transformar o DataFrame para o formato de tabela cruzada</span>
+<span class="n">grafico_data_coordenador</span> <span class="o">=</span> <span class="n">contagem_por_uf_coordenador</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;coordenador_saf_situacao&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;contagem&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o gráfico</span>
+<span class="n">grafico_data_coordenador</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exclusividade ou não do coordenador no SFA&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos ao gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Contagem&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="c1"># Colocar a legenda abaixo do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Situação do coordenador&#39;</span><span class="p">,</span> 
+    <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">,</span> 
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15</span><span class="p">),</span> 
+    <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span>  <span class="c1"># Distribuir legendas em 2 colunas</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a78f709d9a251d598dc08f8a9fa19ce3327f1e7d235b794eac55056e88534996.png" src="_images/a78f709d9a251d598dc08f8a9fa19ce3327f1e7d235b794eac55056e88534996.png" />
+</div>
+</div>
+</section>
+<section id="capacitacao-nos-ultimos-12-meses-da-equipe-de-profissionais-do-sfa">
+<h2>Capacitação, nos últimos 12 meses, da equipe de profissionais do SFA<a class="headerlink" href="#capacitacao-nos-ultimos-12-meses-da-equipe-de-profissionais-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colunas_capaci_equipe</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;capaci_equipe_tec_saf_presencial&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;capaci_equipe_tec_saf_ead&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;capaci_equipe_tec_saf_nao_faz&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">colunas_capaci_equipe</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>capaci_equipe_tec_saf_presencial    0
+capaci_equipe_tec_saf_ead           0
+capaci_equipe_tec_saf_nao_faz       0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_capaci_equipe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">coluna</span><span class="p">:</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">colunas_capaci_equipe</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contagem_capaci_equipe</span> <span class="o">=</span> <span class="n">contagem_capaci_equipe</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">contagem_capaci_equipe</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Exibir os valores dentro do heatmap</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.0f&quot;</span><span class="p">,</span>   <span class="c1"># Formato dos números</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Purples&quot;</span><span class="p">,</span>  <span class="c1"># Escolha da paleta de cores</span>
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Contagem&#39;</span><span class="p">}</span>  <span class="c1"># Rótulo da barra de cores</span>
+<span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribuição dos espaços físicos&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Resposta&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Espaço Físico&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/12b541a7b60b22685e5070ff08b62a95dc45f5dc1819533b1516544484cd3041.png" src="_images/12b541a7b60b22685e5070ff08b62a95dc45f5dc1819533b1516544484cd3041.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4_acoes_para_fam_acolhedora.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Variáveis relacionadas à divulgação para captar novas famílias</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6_correlacoes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Correlações lineares entre as variáveis de interesse</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-temporalidade-das-unidades-que-ofertam-o-servico-em-2023">Análise da temporalidade das unidades que ofertam o serviço em 2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-de-implementacao-das-unidades-que-ofertam-o-servico">Data de implementação das unidades que ofertam o serviço</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-de-implementacao-do-servico-nas-unidades">Data de implementação do serviço nas unidades</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-natureza-da-unidade-que-oferta-o-servico">Análise da natureza da unidade que oferta o serviço</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-do-custo-mensal-de-manutencao-do-servico-no-mes-de-setembro-de-2023">Análise do custo mensal de manutenção do serviço no mês de setembro de 2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considerando-os-gastos-com-salarios-aluguel-da-sede-telefone-etc-excluindo-o-valor-dos-subsidios-repassados-as-familias-acolhedoras">Considerando os gastos com salários, aluguel da sede, telefone, etc (EXCLUINDO o valor dos subsídios repassados às famílias acolhedoras)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-da-estrutura-fisica-do-servico">Análise da estrutura física do serviço</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situacao-do-imovel-onde-funciona-a-sede-do-sfa">Situação do imóvel onde funciona a sede do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-dos-espacos-fisicos-que-compoem-a-sede-do-sfa">Descrição dos espaços físicos que compõem a sede do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descricao-dos-equipamentos-que-compoem-a-sede-do-sfa">Descrição dos equipamentos que compõem a sede do SFA</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-aos-profissonais-do-sfa">Variáveis relacionadas aos profissonais do SFA</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusividade-da-equipe-tecnica-do-sfa">Exclusividade da equipe técnica do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacitacao-nos-ultimos-12-meses-da-equipe-de-profissionais-do-sfa">Capacitação, nos últimos 12 meses, da equipe de profissionais do SFA</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Núcleo de Gestão da Informação e do Conhecimento - SEGES/MGI
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

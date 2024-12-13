@@ -1,0 +1,1670 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero &#8212; Análise de Dados - Serviço Família Acolhedora</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_caracteristicas_acolhidas';</script>
+    <link rel="canonical" href="/familia-acolhedora/1_caracteristicas_acolhidas.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variáveis relacionadas às famílias acolhedoras" href="2_fam_acolhedora.html" />
+    <link rel="prev" title="Análise de dados do Serviço Família Acolhedora" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Análise de Dados - Serviço Família Acolhedora</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Análise de dados do Serviço Família Acolhedora
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2_fam_acolhedora.html">Variáveis relacionadas às famílias acolhedoras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_subsidios_apoios.html">Variáveis relacionadas a subsídio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_acoes_para_fam_acolhedora.html">Variáveis relacionadas à divulgação para captar novas famílias</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="5_caracteristicas_unidades.html">Análise da distribuição geográfica das unidades de acolhimento que oferecem o Serviço de Família Acolhedora</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6_correlacoes.html">Correlações lineares entre as variáveis de interesse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_boas_praticas.html">Análise de boas práticas no Serviço de Família Acolhedora (SFA)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_caracteristicas_acolhidas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-por-genero-e-por-faixa-etaria">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos por gênero e por faixa etária</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-determinadas-caracteristicas">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com determinadas características</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-o-tempo-no-sfa">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com o tempo no SFA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-a-raca">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com a raça</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/familia_acolhedora/dados_gerais_tratado.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IBGE</th>
+      <th>NU_IDENTIFICADOR</th>
+      <th>municipio</th>
+      <th>uf</th>
+      <th>data_implementacao_unidade</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>natureza_unidade</th>
+      <th>custo_manutencao</th>
+      <th>servico_regulamentado</th>
+      <th>...</th>
+      <th>coordenador_saf_situacao</th>
+      <th>capaci_equipe_tec_saf_presencial</th>
+      <th>capaci_equipe_tec_saf_ead</th>
+      <th>capaci_equipe_tec_saf_nao_faz</th>
+      <th>capaci_equipe_tec_saf_presencial_qtd</th>
+      <th>capaci_equipe_tec_saf_ead_qtd</th>
+      <th>IBGE7</th>
+      <th>nome_da_uf</th>
+      <th>Regiao</th>
+      <th>Município</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>110011</td>
+      <td>1,10011E+12</td>
+      <td>JARU</td>
+      <td>RO</td>
+      <td>29/03/2023</td>
+      <td>-10.439</td>
+      <td>-62.466</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce concomitantemente a função de coordenad...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1100114</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Jaru</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>110012</td>
+      <td>1,10012E+12</td>
+      <td>JI-PARANA</td>
+      <td>RO</td>
+      <td>02/01/2022</td>
+      <td>-10.876.486.067.028.500</td>
+      <td>-619.596.290.588.379</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Sim</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>1100122</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Ji-Paraná</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>110020</td>
+      <td>1,1002E+12</td>
+      <td>PORTO VELHO</td>
+      <td>RO</td>
+      <td>13/12/2017</td>
+      <td>-915.359.258.390.788</td>
+      <td>-643.068.141.967.022</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Sim</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>1100205</td>
+      <td>Rondonia</td>
+      <td>Região Norte</td>
+      <td>Porto Velho</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>120040</td>
+      <td>1,2004E+12</td>
+      <td>RIO BRANCO</td>
+      <td>AC</td>
+      <td>17/05/2013</td>
+      <td>-9.948.852.227.687.540</td>
+      <td>-6.785.414.814.949.030</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1200401</td>
+      <td>Acre</td>
+      <td>Região Norte</td>
+      <td>Rio Branco</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>130170</td>
+      <td>1,3017E+12</td>
+      <td>HUMAITA</td>
+      <td>AM</td>
+      <td>28/12/2020</td>
+      <td>-7.519.639.784.496.380</td>
+      <td>-63.031.353.950.500.400</td>
+      <td>Governamental</td>
+      <td>NaN</td>
+      <td>Sim, por lei</td>
+      <td>...</td>
+      <td>Exerce exclusivamente a função de coordenador(...</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1301704</td>
+      <td>Amazonas</td>
+      <td>Região Norte</td>
+      <td>Humaitá</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 174 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;IBGE&#39;,
+ &#39;NU_IDENTIFICADOR&#39;,
+ &#39;municipio&#39;,
+ &#39;uf&#39;,
+ &#39;data_implementacao_unidade&#39;,
+ &#39;Latitude&#39;,
+ &#39;Longitude&#39;,
+ &#39;natureza_unidade&#39;,
+ &#39;custo_manutencao&#39;,
+ &#39;servico_regulamentado&#39;,
+ &#39;ano_implementacao_servico&#39;,
+ &#39;subsidio_valor_mensal&#39;,
+ &#39;subsidio_itens_manutencao&#39;,
+ &#39;subsidio_mobiliario_transporte&#39;,
+ &#39;subsidio_isencao_imposto_taxa&#39;,
+ &#39;subsidio_outros&#39;,
+ &#39;subsidio_nao_repassa&#39;,
+ &#39;subsidio_outros_quais&#39;,
+ &#39;fam_aceita_vinculo_irmaos&#39;,
+ &#39;qtd_criancas_acolhidas&#39;,
+ &#39;qtd_criancas_acolhidas_12meses&#39;,
+ &#39;qtd_masc_0_2&#39;,
+ &#39;qtd_masc_3_5&#39;,
+ &#39;qtd_masc_6_11&#39;,
+ &#39;qtd_masc_12_13&#39;,
+ &#39;qtd_masc_14_15&#39;,
+ &#39;qtd_masc_16_17&#39;,
+ &#39;qtd_masc_acima_18&#39;,
+ &#39;qtd_masc_total&#39;,
+ &#39;qtd_fem_0_2&#39;,
+ &#39;qtd_fem_3_5&#39;,
+ &#39;qtd_fem_6_11&#39;,
+ &#39;qtd_fem_12_13&#39;,
+ &#39;qtd_fem_14_15&#39;,
+ &#39;qtd_fem_16_17&#39;,
+ &#39;qtd_fem_acima_18&#39;,
+ &#39;qtd_refugiados_imigrantes&#39;,
+ &#39;qtd_venezuelanos&#39;,
+ &#39;qtd_criancas_tempo_servico_menos_1mes&#39;,
+ &#39;qtd_criancas_tempo_servico_1_3meses&#39;,
+ &#39;qtd_criancas_tempo_servico_4_6meses&#39;,
+ &#39;qtd_criancas_tempo_servico_7_12meses&#39;,
+ &#39;qtd_criancas_tempo_servico_13_18meses&#39;,
+ &#39;qtd_criancas_tempo_servico_19_24meses&#39;,
+ &#39;qtd_criancas_tempo_servico_25_48meses&#39;,
+ &#39;qtd_criancas_tempo_servico_49_72meses&#39;,
+ &#39;qtd_criancas_tempo_mais_72meses&#39;,
+ &#39;qtd_criancas_deficiencia&#39;,
+ &#39;qtd_criancas_transt_sofri_psiquico&#39;,
+ &#39;qtd_criancas_necessidade_especial&#39;,
+ &#39;qtd_adoles_socioeducativo&#39;,
+ &#39;qtd_criancas_traj_de_rua&#39;,
+ &#39;qtd_criancas_indigenas&#39;,
+ &#39;qtd_criancas_outros_povos_trad&#39;,
+ &#39;qtd_criancas_dependencia_drogas&#39;,
+ &#39;qtd_criancas_gestantes&#39;,
+ &#39;qtd_criancas_pretas&#39;,
+ &#39;qtd_criancas_pardas&#39;,
+ &#39;qtd_criancas_brancas&#39;,
+ &#39;qtd_criancas_amarelas&#39;,
+ &#39;qtd_criancas_raca_indigenas&#39;,
+ &#39;qtd_motivo_entrega_voluntaria_adocao&#39;,
+ &#39;qtd_motivo_orfandade&#39;,
+ &#39;qtd_motivo_abandono&#39;,
+ &#39;qtd_motivo_pais_usuarios&#39;,
+ &#39;qtd_motivo_pais_com_deficiencia&#39;,
+ &#39;qtd_motivo_pais_transt_sofri_psiquicos&#39;,
+ &#39;qtd_motivo_pais_ausentes_doenca&#39;,
+ &#39;qtd_motivo_pais_prisao_ou_internacao&#39;,
+ &#39;qtd_motivo_violencia_domestica_fisica&#39;,
+ &#39;qtd_motivo_violencia_domestica_psicologica&#39;,
+ &#39;qtd_motivo_abuso_sex_intrafamiliar&#39;,
+ &#39;qtd_motivo_exploracao_sex&#39;,
+ &#39;qtd_motivo_conflito_familiar&#39;,
+ &#39;qtd_motivo_exploracao_trabalho&#39;,
+ &#39;qtd_motivo_pais_cond_especif_saude&#39;,
+ &#39;qtd_motivo_pais_s_condicoes_depend_quim&#39;,
+ &#39;qtd_motivo_ameaca_morte&#39;,
+ &#39;qtd_motivo_situacao_rua&#39;,
+ &#39;qtd_motivo_negligencia_familia&#39;,
+ &#39;qtd_motivo_fam_situacao_rua&#39;,
+ &#39;qtd_motivo_fam_moradia_insalubre&#39;,
+ &#39;qtd_motivo_fam_carencia_rec_materiais&#39;,
+ &#39;qtd_oriundos_pbf&#39;,
+ &#39;qtd_oriundos_fam_menos_1sm&#39;,
+ &#39;divulgacao_outdoors_busdoors&#39;,
+ &#39;divulgacao_materiais_grande_circ&#39;,
+ &#39;divulgacao_radio_tv_impressa&#39;,
+ &#39;divulgacao_eventos_palestras&#39;,
+ &#39;divulgacao_redes_sociais&#39;,
+ &#39;divulgacao_articulacao_liderancas&#39;,
+ &#39;divulgacao_outros&#39;,
+ &#39;divulgacao_nao_faz&#39;,
+ &#39;divulgacao_outros_quais&#39;,
+ &#39;ch_capacitacao_inicial&#39;,
+ &#39;selecao_fam_reunioes&#39;,
+ &#39;selecao_fam_analise_doc&#39;,
+ &#39;selecao_fam_entrevistas&#39;,
+ &#39;selecao_fam_visitas_domiciliares&#39;,
+ &#39;selecao_fam_outros&#39;,
+ &#39;selecao_fam_nao_faz&#39;,
+ &#39;selecao_fam_outros_quais&#39;,
+ &#39;capac_ini_conti_fam_encontros_grupos&#39;,
+ &#39;capac_ini_conti_fam_encontros_indivi&#39;,
+ &#39;capac_ini_conti_fam_paletras&#39;,
+ &#39;capac_ini_conti_fam_rodas_conversa&#39;,
+ &#39;capac_ini_conti_fam_outros&#39;,
+ &#39;capac_ini_conti_fam_nao_faz&#39;,
+ &#39;capac_ini_conti_fam_outros_quais&#39;,
+ &#39;acompanhamento_fam_aprox_supervi&#39;,
+ &#39;acompanhamento_fam_visitas_domicil&#39;,
+ &#39;acompanhamento_fam_aten_psicoss&#39;,
+ &#39;acompanhamento_fam_contato_tel&#39;,
+ &#39;acompanhamento_fam_outros&#39;,
+ &#39;acompanhamento_fam_outros_quais&#39;,
+ &#39;ativi_sistematicas_atend_psicosso_indivi&#39;,
+ &#39;ativi_sistematicas_escuta_qualific&#39;,
+ &#39;ativi_sistematicas_acompanh_escolar&#39;,
+ &#39;ativi_sistematicas_acompanh_saude&#39;,
+ &#39;ativi_sistematicas_encaminhc_docs&#39;,
+ &#39;ativi_sistematicas_encaminhc_qualif_prof&#39;,
+ &#39;ativi_sistematicas_identifi_fam_nat_exten&#39;,
+ &#39;ativi_sistematicas_viabili_encon_fam_ori&#39;,
+ &#39;ativi_sistematicas_constr_plano_acomp_fam_ori&#39;,
+ &#39;ativi_sistematicas_atend_psicosso_indiv_fam_ori&#39;,
+ &#39;ativi_sistematicas_reunioes_fam_ori&#39;,
+ &#39;ativi_sistematicas_entrevis_fam_ori&#39;,
+ &#39;ativi_sistematicas_visi_domic_fam_ori&#39;,
+ &#39;ativi_sistematicas_genograma_ecomapa&#39;,
+ &#39;ativi_sistematicas_relat_trimes_judic&#39;,
+ &#39;ativi_sistematicas_estudo_caso&#39;,
+ &#39;ativi_sistematicas_encaminhc_rede&#39;,
+ &#39;ativi_sistematicas_discuss_casos_rede&#39;,
+ &#39;ativi_sistematicas_outros&#39;,
+ &#39;ativi_sistematicas_nao_faz&#39;,
+ &#39;ativi_sistematicas_outros_quais&#39;,
+ &#39;retorno_fam_ori_fam_ado_judic_informa_decisoes&#39;,
+ &#39;retorno_fam_ori_fam_ado_judic_nao_informa_decisoes&#39;,
+ &#39;retorno_fam_ori_fam_ado_tempo_prepar_suficiente&#39;,
+ &#39;retorno_fam_ori_fam_ado_tempo_prepar_insuficiente&#39;,
+ &#39;freq_acompanh_fam_acolhedora&#39;,
+ &#39;qtd_fam_processo_habilitacao&#39;,
+ &#39;qtd_fam_aptas_ou_acolhendo&#39;,
+ &#39;num_atual_fam_suficiente&#39;,
+ &#39;imovel_sede_saf&#39;,
+ &#39;espaco_fisico_sala_atendimento&#39;,
+ &#39;espaco_fisico_espaco_reunioes&#39;,
+ &#39;espaco_fisico_sala_equip_tec&#39;,
+ &#39;espaco_fisico_sala_coord_adm&#39;,
+ &#39;espaco_fisico_area_recepcao&#39;,
+ &#39;espaco_fisico_copa&#39;,
+ &#39;equipamentos_veiculo_exclusivo&#39;,
+ &#39;equipamentos_veiculo_compartilhado&#39;,
+ &#39;equipamentos_acervo_bibliog&#39;,
+ &#39;equipamentos_mater_pedago&#39;,
+ &#39;equipamentos_tel_fixo&#39;,
+ &#39;equipamentos_cel&#39;,
+ &#39;equipamentos_impressora&#39;,
+ &#39;equipamentos_de_som&#39;,
+ &#39;equipamentos_proj_imagens&#39;,
+ &#39;equipamentos_bebedouro&#39;,
+ &#39;equipamentos_comput_internet&#39;,
+ &#39;equipamentos_qtd_comput_internet&#39;,
+ &#39;equipe_tec_exclusiva_saf&#39;,
+ &#39;coordenador_saf_situacao&#39;,
+ &#39;capaci_equipe_tec_saf_presencial&#39;,
+ &#39;capaci_equipe_tec_saf_ead&#39;,
+ &#39;capaci_equipe_tec_saf_nao_faz&#39;,
+ &#39;capaci_equipe_tec_saf_presencial_qtd&#39;,
+ &#39;capaci_equipe_tec_saf_ead_qtd&#39;,
+ &#39;IBGE7&#39;,
+ &#39;nome_da_uf&#39;,
+ &#39;Regiao&#39;,
+ &#39;Município&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="variaveis-relacionadas-a-quantidade-de-criancas-acolhidas-total-e-por-genero">
+<h1>Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero<a class="headerlink" href="#variaveis-relacionadas-a-quantidade-de-criancas-acolhidas-total-e-por-genero" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qtd_acolhidas</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">,</span> <span class="s1">&#39;Regiao&#39;</span><span class="p">])[</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qtd_acolhidas</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uf</th>
+      <th>Regiao</th>
+      <th>qtd_criancas_acolhidas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16</th>
+      <td>PR</td>
+      <td>Região Sul</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>MG</td>
+      <td>Região Sudeste</td>
+      <td>324</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>SC</td>
+      <td>Região Sul</td>
+      <td>280</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>SP</td>
+      <td>Região Sudeste</td>
+      <td>269</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>RS</td>
+      <td>Região Sul</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>RJ</td>
+      <td>Região Sudeste</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>MS</td>
+      <td>Região Centro Oeste</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BA</td>
+      <td>Região Nordeste</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AM</td>
+      <td>Região Norte</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CE</td>
+      <td>Região Nordeste</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>PE</td>
+      <td>Região Nordeste</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>PB</td>
+      <td>Região Nordeste</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>DF</td>
+      <td>Região Centro Oeste</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>PA</td>
+      <td>Região Norte</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ES</td>
+      <td>Região Sudeste</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>MA</td>
+      <td>Região Nordeste</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>MT</td>
+      <td>Região Centro Oeste</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>RN</td>
+      <td>Região Nordeste</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>RO</td>
+      <td>Região Norte</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>AC</td>
+      <td>Região Norte</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PI</td>
+      <td>Região Nordeste</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>GO</td>
+      <td>Região Centro Oeste</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>TO</td>
+      <td>Região Norte</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AP</td>
+      <td>Região Norte</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define cores para cada região</span>
+<span class="n">cores_regiao</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Região Norte&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Nordeste&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Centro Oeste&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Região Sudeste&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;Região Sul&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cria o gráfico de barras para a quantidade de crianças/adolescentes acolhidos por UF</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">regiao</span><span class="p">,</span> <span class="n">cor</span> <span class="ow">in</span> <span class="n">cores_regiao</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">df_qtd_acolhidas</span><span class="p">[</span><span class="n">df_qtd_acolhidas</span><span class="p">[</span><span class="s1">&#39;Regiao&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">regiao</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;uf&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">regiao</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes acolhidos pelo SFA estão acolhendo por UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Região&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dc84e74653b601462bf844a6a86e2a6d164cfaab7399f30328a8b655155624e1.png" src="_images/dc84e74653b601462bf844a6a86e2a6d164cfaab7399f30328a8b655155624e1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[[</span><span class="s1">&#39;qtd_fem_0_2&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_3_5&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_6_11&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_12_13&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_14_15&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_16_17&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_fem_acima_18&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupamento por UF</span>
+<span class="n">df_qtd_por_genero</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;uf&#39;</span><span class="p">])[[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_total&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qtd_por_genero</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_qtd_por_genero</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_qtd_por_genero</span><span class="p">[</span><span class="s1">&#39;qtd_masc_total&#39;</span><span class="p">]</span>
+<span class="n">df_ordenado_genero</span> <span class="o">=</span> <span class="n">df_qtd_por_genero</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;uf&#39;</span><span class="p">]))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Feminino&#39;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_masc_total&#39;</span><span class="p">],</span>
+    <span class="n">left</span><span class="o">=</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Masculino&#39;</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por gênero&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;uf&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gênero&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3f598baf9b1d1361d57622639b955f52feb42c7378a630bb0a6db8d1e6968f98.png" src="_images/3f598baf9b1d1361d57622639b955f52feb42c7378a630bb0a6db8d1e6968f98.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupamento por UF e cálculo das porcentagens</span>
+<span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_fem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_masc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_masc_total&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">df_ordenado_genero</span> <span class="o">=</span> <span class="n">df_ordenado_genero</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;level_0&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_fem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_fem_total&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_masc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;qtd_masc_total&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">df_ordenado_genero</span> <span class="o">=</span> <span class="n">df_ordenado_genero</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;level_0&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">])</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/frame.py:5581,</span> in <span class="ni">DataFrame.drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5433</span> <span class="k">def</span> <span class="nf">drop</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">5434</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5435</span>     <span class="n">labels</span><span class="p">:</span> <span class="n">IndexLabel</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5442</span>     <span class="n">errors</span><span class="p">:</span> <span class="n">IgnoreRaise</span> <span class="o">=</span> <span class="s2">&quot;raise&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5443</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5444</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">5445</span><span class="sd">     Drop specified labels from rows or columns.</span>
+<span class="g g-Whitespace">   </span><span class="mi">5446</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5579</span><span class="sd">             weight  1.0     0.8</span>
+<span class="g g-Whitespace">   </span><span class="mi">5580</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">5581</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">5582</span>         <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5583</span>         <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5584</span>         <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5585</span>         <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5586</span>         <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5587</span>         <span class="n">inplace</span><span class="o">=</span><span class="n">inplace</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5588</span>         <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">5589</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/generic.py:4788,</span> in <span class="ni">NDFrame.drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4786</span> <span class="k">for</span> <span class="n">axis</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">axes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">4787</span>     <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">4788</span>         <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">_drop_axis</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4790</span> <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4791</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_update_inplace</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/generic.py:4830,</span> in <span class="ni">NDFrame._drop_axis</span><span class="nt">(self, labels, axis, level, errors, only_slice)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4828</span>         <span class="n">new_axis</span> <span class="o">=</span> <span class="n">axis</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4829</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">4830</span>         <span class="n">new_axis</span> <span class="o">=</span> <span class="n">axis</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4831</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="n">axis</span><span class="o">.</span><span class="n">get_indexer</span><span class="p">(</span><span class="n">new_axis</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4833</span> <span class="c1"># Case for non-unique axis</span>
+<span class="g g-Whitespace">   </span><span class="mi">4834</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/indexes/base.py:7070,</span> in <span class="ni">Index.drop</span><span class="nt">(self, labels, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">7068</span> <span class="k">if</span> <span class="n">mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">7069</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">!=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">7070</span>         <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">labels</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2"> not found in axis&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">7071</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="n">indexer</span><span class="p">[</span><span class="o">~</span><span class="n">mask</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">7072</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">indexer</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &quot;[&#39;level_0&#39;, &#39;index&#39;] not found in axis&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arredondar porcentagens para 2 casas decimais</span>
+<span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_fem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_fem&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_masc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_ordenado_genero</span><span class="p">[</span><span class="s1">&#39;pct_masc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ordenado_genero</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uf</th>
+      <th>qtd_fem_total</th>
+      <th>qtd_masc_total</th>
+      <th>total</th>
+      <th>pct_fem</th>
+      <th>pct_masc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PR</td>
+      <td>301</td>
+      <td>290</td>
+      <td>591</td>
+      <td>50.93</td>
+      <td>49.07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MG</td>
+      <td>177</td>
+      <td>147</td>
+      <td>324</td>
+      <td>54.63</td>
+      <td>45.37</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>SC</td>
+      <td>141</td>
+      <td>139</td>
+      <td>280</td>
+      <td>50.36</td>
+      <td>49.64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SP</td>
+      <td>140</td>
+      <td>129</td>
+      <td>269</td>
+      <td>52.04</td>
+      <td>47.96</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>RS</td>
+      <td>78</td>
+      <td>65</td>
+      <td>143</td>
+      <td>54.55</td>
+      <td>45.45</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RJ</td>
+      <td>62</td>
+      <td>67</td>
+      <td>129</td>
+      <td>48.06</td>
+      <td>51.94</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>MS</td>
+      <td>38</td>
+      <td>29</td>
+      <td>67</td>
+      <td>56.72</td>
+      <td>43.28</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>BA</td>
+      <td>22</td>
+      <td>24</td>
+      <td>46</td>
+      <td>47.83</td>
+      <td>52.17</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>AM</td>
+      <td>25</td>
+      <td>18</td>
+      <td>43</td>
+      <td>58.14</td>
+      <td>41.86</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>CE</td>
+      <td>13</td>
+      <td>21</td>
+      <td>34</td>
+      <td>38.24</td>
+      <td>61.76</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>PE</td>
+      <td>17</td>
+      <td>14</td>
+      <td>31</td>
+      <td>54.84</td>
+      <td>45.16</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>PB</td>
+      <td>11</td>
+      <td>19</td>
+      <td>30</td>
+      <td>36.67</td>
+      <td>63.33</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>DF</td>
+      <td>19</td>
+      <td>9</td>
+      <td>28</td>
+      <td>67.86</td>
+      <td>32.14</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>PA</td>
+      <td>15</td>
+      <td>11</td>
+      <td>26</td>
+      <td>57.69</td>
+      <td>42.31</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>ES</td>
+      <td>9</td>
+      <td>11</td>
+      <td>20</td>
+      <td>45.00</td>
+      <td>55.00</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>MT</td>
+      <td>6</td>
+      <td>11</td>
+      <td>17</td>
+      <td>35.29</td>
+      <td>64.71</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>MA</td>
+      <td>8</td>
+      <td>9</td>
+      <td>17</td>
+      <td>47.06</td>
+      <td>52.94</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>RN</td>
+      <td>5</td>
+      <td>6</td>
+      <td>11</td>
+      <td>45.45</td>
+      <td>54.55</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>RO</td>
+      <td>4</td>
+      <td>6</td>
+      <td>10</td>
+      <td>40.00</td>
+      <td>60.00</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>AC</td>
+      <td>9</td>
+      <td>0</td>
+      <td>9</td>
+      <td>100.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>PI</td>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
+      <td>44.44</td>
+      <td>55.56</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>GO</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>100.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>TO</td>
+      <td>3</td>
+      <td>2</td>
+      <td>5</td>
+      <td>60.00</td>
+      <td>40.00</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>AP</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0.00</td>
+      <td>100.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-por-genero-e-por-faixa-etaria">
+<h1>Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos por gênero e por faixa etária<a class="headerlink" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-por-genero-e-por-faixa-etaria" title="Link to this heading">#</a></h1>
+<p>As seguintes variáveis estão relacionadas à quantidade de crianças/adolescentes de acordo com o gênero e faixa etária:</p>
+<ul class="simple">
+<li><p>‘qtd_masc_0_2’</p></li>
+<li><p>‘qtd_masc_3_5’</p></li>
+<li><p>‘qtd_masc_6_11’</p></li>
+<li><p>‘qtd_masc_12_13’</p></li>
+<li><p>‘qtd_masc_14_15’</p></li>
+<li><p>‘qtd_masc_16_17’</p></li>
+<li><p>‘qtd_masc_acima_18’</p></li>
+<li><p>‘qtd_fem_0_2’</p></li>
+<li><p>‘qtd_fem_3_5’</p></li>
+<li><p>‘qtd_fem_6_11’</p></li>
+<li><p>‘qtd_fem_12_13’</p></li>
+<li><p>‘qtd_fem_14_15’</p></li>
+<li><p>‘qtd_fem_16_17’</p></li>
+<li><p>‘qtd_fem_acima_18’</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soma os valores por faixa etária de meninos</span>
+<span class="n">faixas_etarias_masc</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;qtd_masc_0_2&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_3_5&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_6_11&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_12_13&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_14_15&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_16_17&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_masc_acima_18&#39;</span>
+<span class="p">]</span>
+<span class="n">totais_por_faixa_masc</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">faixas_etarias_masc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Criação do gráfico de barras</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por faixa etária (masculino)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/938fcd6d49f7abe55e1297a16f30a0f527ee90d6718b5d75e188ed72b1073aba.png" src="_images/938fcd6d49f7abe55e1297a16f30a0f527ee90d6718b5d75e188ed72b1073aba.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soma os valores por faixa etária de meninas</span>
+<span class="n">faixas_etarias_fem</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;qtd_fem_0_2&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fem_3_5&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fem_6_11&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_12_13&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fem_14_15&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fem_16_17&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fem_acima_18&#39;</span>
+<span class="p">]</span>
+<span class="n">totais_por_faixa_fem</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">faixas_etarias_fem</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Criação do gráfico de barras</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por faixa etária (feminino)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9783ea15244ec585057b9fbffd5ecdc5fc7f3f3dc32ac89ba48bf33462501755.png" src="_images/9783ea15244ec585057b9fbffd5ecdc5fc7f3f3dc32ac89ba48bf33462501755.png" />
+</div>
+</div>
+</section>
+<section id="variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-determinadas-caracteristicas">
+<h1>Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com determinadas características<a class="headerlink" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-determinadas-caracteristicas" title="Link to this heading">#</a></h1>
+<p>Para compreender algumas características das crianças e dos adolescentes atualmente acolhidos, foi feito um filtro para compreender o quantitativo total que tenham as seguintes características:</p>
+<ul class="simple">
+<li><p>‘qtd_refugiados_imigrantes’: crianças/adolescentes que vieram de outros países</p></li>
+<li><p>‘qtd_venezuelanos’: crianças/adolescentes com nacionalidade venezuelana</p></li>
+<li><p>‘qtd_criancas_deficiencia’: crianças/adolescentes com deficiência</p></li>
+<li><p>‘qtd_criancas_transt_sofri_psiquico’: crianças/adolescentes com transtorno mental/fofrimento psíquico</p></li>
+<li><p>‘qtd_criancas_necessidade_especial’: crianças/adolescentes com necessidade de cuidados especializados devido a condições de saúde (p.ex: traqueostomizados, com necessidade de suporte ventilatório ou de outros aparelhos para suporte à vida, tratamento ou nutrição parenteral, alimentação enteral, terapias injetáveis, realização de curativos complexos, dentre outros procedimentos)</p></li>
+<li><p>‘qtd_adoles_socioeducativo’: adolescentes em cumprimento de Medidas Socioeducativas em meio aberto ou egressos do sistema socioeducativo</p></li>
+<li><p>‘qtd_criancas_traj_de_rua’: crianças/adolescentes com trajetória de rua</p></li>
+<li><p>‘qtd_criancas_dependencia_drogas’: crianças/adolescentes com dependência de álcool ou outras drogas</p></li>
+<li><p>‘qtd_criancas_outros_povos_trad’: crianças/adolescentes de outros povos e comunidades tradicionais (quilombolas, ciganos, ribeirinhos, extrativistas etc.)</p></li>
+<li><p>‘qtd_criancas_gestantes’: crianças/adolescentes gestantes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">caracteristicas_filtro</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;qtd_refugiados_imigrantes&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_criancas_outros_povos_trad&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_venezuelanos&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_criancas_deficiencia&#39;</span><span class="p">,</span> 
+                          <span class="s1">&#39;qtd_criancas_transt_sofri_psiquico&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_criancas_necessidade_especial&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_adoles_socioeducativo&#39;</span><span class="p">,</span> 
+                          <span class="s1">&#39;qtd_criancas_traj_de_rua&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_criancas_dependencia_drogas&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_criancas_gestantes&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">totais_caracteristicas</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">caracteristicas_filtro</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do gráfico de barras horizontais</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">totais_caracteristicas</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_caracteristicas</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes acolhidos&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Característica&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/aa77523bd5e8b050dc9853cbb75ae035b3402861eb20dbef9e2bc0e25af8ba09.png" src="_images/aa77523bd5e8b050dc9853cbb75ae035b3402861eb20dbef9e2bc0e25af8ba09.png" />
+</div>
+</div>
+</section>
+<section id="variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-o-tempo-no-sfa">
+<h1>Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com o tempo no SFA<a class="headerlink" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-o-tempo-no-sfa" title="Link to this heading">#</a></h1>
+<p>Crianças e adolescentes atualmente acolhidos pelo SFA de acordo com o tempo que estão no serviço:</p>
+<ul class="simple">
+<li><p>‘qtd_criancas_tempo_servico_menos_1mes’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_1_3meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_4_6meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_7_12meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_13_18meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_19_24meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_25_48meses’</p></li>
+<li><p>‘qtd_criancas_tempo_servico_49_72meses’</p></li>
+<li><p>‘qtd_criancas_tempo_mais_72meses’</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tempo_servico</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;qtd_criancas_tempo_servico_menos_1mes&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_1_3meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_4_6meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_7_12meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_13_18meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_19_24meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_25_48meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_servico_49_72meses&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;qtd_criancas_tempo_mais_72meses&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tempo_servico</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">tempo_servico</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do gráfico de barras horizontais</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">df_tempo_servico</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_tempo_servico</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes acolhidos de acordo com o tempo no SFA&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tempo que estão no serviço&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/216eb347003a821d5627a538c1f49d9f4738cad0111931b8956802666f2ebe63.png" src="_images/216eb347003a821d5627a538c1f49d9f4738cad0111931b8956802666f2ebe63.png" />
+</div>
+</div>
+</section>
+<section id="variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-a-raca">
+<h1>Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com a raça<a class="headerlink" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-a-raca" title="Link to this heading">#</a></h1>
+<p>As seguintes variáveis estão relacionadas à raça das crianças e dos adolescentes acolhidos pelo SFA:</p>
+<ul class="simple">
+<li><p>‘qtd_criancas_pretas’</p></li>
+<li><p>‘qtd_criancas_pardas’</p></li>
+<li><p>‘qtd_criancas_brancas’</p></li>
+<li><p>‘qtd_criancas_amarelas’</p></li>
+<li><p>‘qtd_criancas_raca_indigenas’</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raca</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;qtd_criancas_pretas&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_criancas_pardas&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_criancas_brancas&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_criancas_amarelas&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_criancas_raca_indigenas&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">totais_raca</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">raca</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação do gráfico de barras</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">totais_raca</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_raca</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por raça&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Raça&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6fa9e701ddf2bbc699690f5df129fa132f5de338220b4c9509fb6f964bbee781.png" src="_images/6fa9e701ddf2bbc699690f5df129fa132f5de338220b4c9509fb6f964bbee781.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Análise de dados do Serviço Família Acolhedora</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_fam_acolhedora.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variáveis relacionadas às famílias acolhedoras</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Variáveis relacionadas à quantidade de crianças acolhidas total e por gênero</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-por-genero-e-por-faixa-etaria">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos por gênero e por faixa etária</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-determinadas-caracteristicas">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com determinadas características</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-o-tempo-no-sfa">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com o tempo no SFA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variaveis-relacionadas-a-quantidade-de-criancas-adolescentes-acolhidos-de-acordo-com-a-raca">Variáveis relacionadas à quantidade de crianças/adolescentes acolhidos de acordo com a raça</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Núcleo de Gestão da Informação e do Conhecimento - SEGES/MGI
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
