@@ -678,14 +678,14 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cria a matriz de correlação</span>
-<span class="n">matriz_correlacao_geral</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar a matriz de correlação com colunas numéricas explicitamente</span>
+<span class="n">matriz_correlacao_geral</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Define uma máscara para ocultar apenas a metade superior</span>
+<span class="c1"># Definir uma máscara para ocultar a metade superior</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">matriz_correlacao_geral</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Configura o gráfico</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
+<span class="c1"># Configurar o gráfico de correlação</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">26</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
     <span class="n">matriz_correlacao_geral</span><span class="p">,</span>
     <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span>
@@ -694,58 +694,15 @@
     <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">linewidths</span><span class="o">=</span><span class="mf">.5</span><span class="p">,</span>
-    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shrink&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span>
+    <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span>
 <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Matriz de Correlação (Metade Inferior)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Matriz de Correlação&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Cria a matriz de correlação</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">matriz_correlacao_geral</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Define uma máscara para ocultar apenas a metade superior</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">matriz_correlacao_geral</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/frame.py:11049,</span> in <span class="ni">DataFrame.corr</span><span class="nt">(self, method, min_periods, numeric_only)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11047</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
-<span class="g g-Whitespace">  </span><span class="mi">11048</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">cols</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="ne">&gt; </span><span class="mi">11049</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">  </span><span class="mi">11051</span> <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;pearson&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">  </span><span class="mi">11052</span>     <span class="n">correl</span> <span class="o">=</span> <span class="n">libalgos</span><span class="o">.</span><span class="n">nancorr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">minp</span><span class="o">=</span><span class="n">min_periods</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/frame.py:1993,</span> in <span class="ni">DataFrame.to_numpy</span><span class="nt">(self, dtype, copy, na_value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1991</span> <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1992</span>     <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1993</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">na_value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1994</span> <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">dtype</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1995</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/internals/managers.py:1694,</span> in <span class="ni">BlockManager.as_array</span><span class="nt">(self, dtype, copy, na_value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1692</span>         <span class="n">arr</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">writeable</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="g g-Whitespace">   </span><span class="mi">1693</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1694</span>     <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interleave</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">na_value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1695</span>     <span class="c1"># The underlying data was copied within _interleave, so no need</span>
-<span class="g g-Whitespace">   </span><span class="mi">1696</span>     <span class="c1"># to further copy if copy=True or setting na_value</span>
-<span class="g g-Whitespace">   </span><span class="mi">1698</span> <span class="k">if</span> <span class="n">na_value</span> <span class="ow">is</span> <span class="n">lib</span><span class="o">.</span><span class="n">no_default</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/internals/managers.py:1753,</span> in <span class="ni">BlockManager._interleave</span><span class="nt">(self, dtype, na_value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1751</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1752</span>         <span class="n">arr</span> <span class="o">=</span> <span class="n">blk</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1753</span>     <span class="n">result</span><span class="p">[</span><span class="n">rl</span><span class="o">.</span><span class="n">indexer</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span>
-<span class="g g-Whitespace">   </span><span class="mi">1754</span>     <span class="n">itemmask</span><span class="p">[</span><span class="n">rl</span><span class="o">.</span><span class="n">indexer</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="g g-Whitespace">   </span><span class="mi">1756</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">itemmask</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
-
-<span class="ne">ValueError</span>: could not convert string to float: &#39;RO&#39;
-</pre></div>
-</div>
+<img alt="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" src="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -836,14 +793,14 @@
     </tr>
     <tr>
       <th>6</th>
-      <td>qtd_criancas_acolhidas</td>
-      <td>qtd_criancas_acolhidas_12meses</td>
+      <td>qtd_criancas_pardas</td>
+      <td>qtd_masc_total</td>
       <td>0.83</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>qtd_criancas_pardas</td>
-      <td>qtd_masc_total</td>
+      <td>qtd_criancas_acolhidas</td>
+      <td>qtd_criancas_acolhidas_12meses</td>
       <td>0.83</td>
     </tr>
     <tr>
@@ -866,13 +823,13 @@
     </tr>
     <tr>
       <th>11</th>
-      <td>qtd_criancas_tempo_servico_7_12meses</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
+      <td>qtd_criancas_tempo_servico_7_12meses</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
@@ -911,7 +868,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(64)
 </pre></div>
 </div>
 </div>
@@ -921,6 +878,17 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Como há apenas 64 nulos em um universo de 620 linhas, atribuí 0 aos valores nulos, supondo que não há subsídio mensal - </span>
 <span class="c1"># ainda que a resposta pode ter sido Não Sei</span>
 <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2043/2303352333.py:3: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_dados_gerais[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
 </pre></div>
 </div>
 </div>
@@ -1023,7 +991,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" src="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" />
+<img alt="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" src="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1038,7 +1006,55 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Índice de correlação (Spearman): 0.13
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Calcular o índice de correlação Spearman</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">correlacao_spearman</span> <span class="o">=</span> <span class="n">df_sem_outliers</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">df_sem_outliers</span><span class="p">[</span><span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">method</span><span class="o">=</span><span class="s1">&#39;spearman&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Índice de correlação (Spearman): </span><span class="si">{</span><span class="n">correlacao_spearman</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/series.py:2977,</span> in <span class="ni">Series.corr</span><span class="nt">(self, other, method, min_periods)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2974</span> <span class="n">other_values</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2976</span> <span class="k">if</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;pearson&quot;</span><span class="p">,</span> <span class="s2">&quot;spearman&quot;</span><span class="p">,</span> <span class="s2">&quot;kendall&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="nb">callable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2977</span>     <span class="k">return</span> <span class="n">nanops</span><span class="o">.</span><span class="n">nancorr</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2978</span>         <span class="n">this_values</span><span class="p">,</span> <span class="n">other_values</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="n">min_periods</span>
+<span class="g g-Whitespace">   </span><span class="mi">2979</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2981</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2982</span>     <span class="s2">&quot;method must be either &#39;pearson&#39;, &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2983</span>     <span class="s2">&quot;&#39;spearman&#39;, &#39;kendall&#39;, or a callable, &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2984</span>     <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">&#39; was supplied&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">2985</span> <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/nanops.py:85,</span> in <span class="ni">disallow.__call__.&lt;locals&gt;._f</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span>         <span class="sa">f</span><span class="s2">&quot;reduction operation &#39;</span><span class="si">{</span><span class="n">f_name</span><span class="si">}</span><span class="s2">&#39; not allowed for this dtype&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">85</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="c1"># we want to transform an object array</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="c1"># ValueError message to the more typical TypeError</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="c1"># e.g. this is normally a disallowed function on</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="c1"># object arrays that contain strings</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span>     <span class="k">if</span> <span class="n">is_object_dtype</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/nanops.py:1614,</span> in <span class="ni">nancorr</span><span class="nt">(a, b, method, min_periods)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1611</span> <span class="n">a</span> <span class="o">=</span> <span class="n">_ensure_numeric</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1612</span> <span class="n">b</span> <span class="o">=</span> <span class="n">_ensure_numeric</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1614</span> <span class="n">f</span> <span class="o">=</span> <span class="n">get_corr_func</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1615</span> <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/pandas/core/nanops.py:1629,</span> in <span class="ni">get_corr_func</span><span class="nt">(method)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1627</span>     <span class="k">return</span> <span class="n">func</span>
+<span class="g g-Whitespace">   </span><span class="mi">1628</span> <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;spearman&quot;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1629</span>     <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">spearmanr</span>
+<span class="g g-Whitespace">   </span><span class="mi">1631</span>     <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1632</span>         <span class="k">return</span> <span class="n">spearmanr</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
