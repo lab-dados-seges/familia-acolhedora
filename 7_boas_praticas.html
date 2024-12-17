@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +39,10 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -180,9 +180,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -1325,35 +1330,28 @@ dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_pr</span> <span class="o">=</span> <span class="n">df_pr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_sc</span> <span class="o">=</span> <span class="n">df_sc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">df_pr</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df_sc</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2126/2438098985.py:1: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2098/4234166614.py:4: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
 For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
 
 
   df_pr[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
-/tmp/ipykernel_2126/2438098985.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  df_pr[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
-/tmp/ipykernel_2126/2438098985.py:2: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+/tmp/ipykernel_2098/4234166614.py:5: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
 For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
 
 
-  df_sc[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
-/tmp/ipykernel_2126/2438098985.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_sc[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
 </pre></div>
 </div>
@@ -1504,7 +1502,7 @@ Name: subsidio_valor_mensal, dtype: float64
 <span class="p">)</span>
 
 <span class="c1"># Configurar o gráfico</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição de Frequência dos Subsídios Mensais (PR)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribuição de Frequência dos Subsídios Mensais (SC)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Subsídio Mensal (R$)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequência&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -1513,7 +1511,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6619e0486d72a789139dfee6068d87d6865b6f20517c091374a0f946c6a525d4.png" src="_images/6619e0486d72a789139dfee6068d87d6865b6f20517c091374a0f946c6a525d4.png" />
+<img alt="_images/e6091c272f407a9ff85c8037b3e33c917dd925fa4d989b4e1b9eee323f05aed6.png" src="_images/e6091c272f407a9ff85c8037b3e33c917dd925fa4d989b4e1b9eee323f05aed6.png" />
 </div>
 </div>
 </section>
@@ -1649,6 +1647,182 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_uni_fam_munic_pr</span> <span class="o">=</span> <span class="n">df_uni_fam_munic</span><span class="p">[</span><span class="n">df_uni_fam_munic</span><span class="p">[</span><span class="s1">&#39;Nome_UF&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Paraná&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selecionar as colunas relevantes para o merge</span>
+<span class="n">df_pr_reduzido</span> <span class="o">=</span> <span class="n">df_pr</span><span class="p">[[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span> <span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]]</span>
+<span class="n">df_uni_reduzido_pr</span> <span class="o">=</span> <span class="n">df_uni_fam_munic_pr</span><span class="p">[[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span> <span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fazer cópias explícitas dos DataFrames</span>
+<span class="n">df_pr_reduzido</span> <span class="o">=</span> <span class="n">df_pr_reduzido</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_uni_reduzido_pr</span> <span class="o">=</span> <span class="n">df_uni_reduzido_pr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Converter as colunas &#39;IBGE&#39; para string</span>
+<span class="n">df_pr_reduzido</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pr_reduzido</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">df_uni_reduzido_pr</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_uni_reduzido_pr</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Realizar o merge com base no código IBGE</span>
+<span class="n">df_merge_pr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">df_pr_reduzido</span><span class="p">,</span>
+    <span class="n">df_uni_reduzido_pr</span><span class="p">,</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merge_pr</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IBGE</th>
+      <th>num_atual_fam_suficiente</th>
+      <th>Nome_Município</th>
+      <th>pct_total_acolhidos_fam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>410010</td>
+      <td>Sim</td>
+      <td>Abatiá</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>410040</td>
+      <td>Não</td>
+      <td>Almirante Tamandaré</td>
+      <td>0.489796</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>410050</td>
+      <td>Não sabe informar</td>
+      <td>Altônia</td>
+      <td>0.057143</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>410080</td>
+      <td>Não</td>
+      <td>Alvorada do Sul</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>410110</td>
+      <td>Não sabe informar</td>
+      <td>Andirá</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrar o DataFrame para as respostas &quot;Sim&quot; e &quot;Não&quot;</span>
+<span class="n">df_sim_pr</span> <span class="o">=</span> <span class="n">df_merge_pr</span><span class="p">[</span><span class="n">df_merge_pr</span><span class="p">[</span><span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sim&#39;</span><span class="p">]</span>
+<span class="n">df_nao_pr</span> <span class="o">=</span> <span class="n">df_merge_pr</span><span class="p">[</span><span class="n">df_merge_pr</span><span class="p">[</span><span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Não&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configurar o tamanho do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Heatmap para &quot;Sim&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Municípios do PR com Quantidade Suficiente de Famílias (&#39;Sim&#39;)&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_sim_pr</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> 
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">,</span> 
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span>
+    <span class="p">),</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGnBu&quot;</span><span class="p">,</span> 
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> 
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporção Acolhidos (0-1)&#39;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &quot;Municípios do PR com Quantidade Suficiente de Famílias (&#39;Sim&#39;)&quot;}, ylabel=&#39;Nome_Município&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/02114b07e5c120a4d8df6c699c7211df01f8c50500751b68cb5d5a14d57e23aa.png" src="_images/02114b07e5c120a4d8df6c699c7211df01f8c50500751b68cb5d5a14d57e23aa.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configurar o tamanho do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Heatmap para &quot;Não&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Municípios do PR com Quantidade Insuficiente de Famílias (&#39;Não&#39;)&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_nao_pr</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> 
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">,</span> 
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span>
+    <span class="p">),</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlOrRd&quot;</span><span class="p">,</span> 
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> 
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporção Acolhidos (0-1)&#39;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/96e4ae6353778cb14f038b6593f1c8f3ef00428a832e8743d149f43ab416935c.png" src="_images/96e4ae6353778cb14f038b6593f1c8f3ef00428a832e8743d149f43ab416935c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Agrupando os dados para SC</span>
 <span class="n">df_agrupado_suficiente_sc</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">df_sc</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">])</span>
@@ -1694,6 +1868,182 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/0bda00949a7a57b54ec3f8234f7144e094f79b4ab04968a7c71846ecfec127af.png" src="_images/0bda00949a7a57b54ec3f8234f7144e094f79b4ab04968a7c71846ecfec127af.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_uni_fam_munic_sc</span> <span class="o">=</span> <span class="n">df_uni_fam_munic</span><span class="p">[</span><span class="n">df_uni_fam_munic</span><span class="p">[</span><span class="s1">&#39;Nome_UF&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Santa Catarina&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selecionar as colunas relevantes para o merge</span>
+<span class="n">df_sc_reduzido</span> <span class="o">=</span> <span class="n">df_sc</span><span class="p">[[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span> <span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]]</span>
+<span class="n">df_uni_reduzido_sc</span> <span class="o">=</span> <span class="n">df_uni_fam_munic_sc</span><span class="p">[[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span> <span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fazer cópias explícitas dos DataFrames</span>
+<span class="n">df_sc_reduzido</span> <span class="o">=</span> <span class="n">df_sc_reduzido</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_uni_reduzido_sc</span> <span class="o">=</span> <span class="n">df_uni_reduzido_sc</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Converter as colunas &#39;IBGE&#39; para string</span>
+<span class="n">df_sc_reduzido</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sc_reduzido</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">df_uni_reduzido_sc</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_uni_reduzido_sc</span><span class="p">[</span><span class="s1">&#39;IBGE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Realizar o merge com base no código IBGE</span>
+<span class="n">df_merge_sc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">df_sc_reduzido</span><span class="p">,</span>
+    <span class="n">df_uni_reduzido_sc</span><span class="p">,</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;IBGE&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merge_sc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IBGE</th>
+      <th>num_atual_fam_suficiente</th>
+      <th>Nome_Município</th>
+      <th>pct_total_acolhidos_fam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>420010</td>
+      <td>Sim</td>
+      <td>Abelardo Luz</td>
+      <td>0.300000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>420240</td>
+      <td>Não</td>
+      <td>Blumenau</td>
+      <td>0.039007</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>420290</td>
+      <td>Não</td>
+      <td>Brusque</td>
+      <td>0.005348</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>420300</td>
+      <td>Sim</td>
+      <td>Caçador</td>
+      <td>0.567568</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>420370</td>
+      <td>Não</td>
+      <td>Canelinha</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrar o DataFrame para as respostas &quot;Sim&quot; e &quot;Não&quot;</span>
+<span class="n">df_sim_sc</span> <span class="o">=</span> <span class="n">df_merge_sc</span><span class="p">[</span><span class="n">df_merge_sc</span><span class="p">[</span><span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sim&#39;</span><span class="p">]</span>
+<span class="n">df_nao_sc</span> <span class="o">=</span> <span class="n">df_merge_sc</span><span class="p">[</span><span class="n">df_merge_sc</span><span class="p">[</span><span class="s1">&#39;num_atual_fam_suficiente&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Não&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configurar o tamanho do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Heatmap para &quot;Sim&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Municípios de SC com Quantidade Suficiente de Famílias (&#39;Sim&#39;)&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_sim_sc</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> 
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">,</span> 
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span>
+    <span class="p">),</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGnBu&quot;</span><span class="p">,</span> 
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> 
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporção Acolhidos (0-1)&#39;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &quot;Municípios de SC com Quantidade Suficiente de Famílias (&#39;Sim&#39;)&quot;}, ylabel=&#39;Nome_Município&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/f281a1dd7ccc458cb7eff88b9a1e85eb9cc3622acf48e9dd64fa98cbd358c33c.png" src="_images/f281a1dd7ccc458cb7eff88b9a1e85eb9cc3622acf48e9dd64fa98cbd358c33c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configurar o tamanho do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Heatmap para &quot;Não&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Municípios de SC com Quantidade Insuficiente de Famílias (&#39;Não&#39;)&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_nao_sc</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s1">&#39;Nome_Município&#39;</span><span class="p">,</span> 
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;pct_total_acolhidos_fam&#39;</span><span class="p">,</span> 
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span>
+    <span class="p">),</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlOrRd&quot;</span><span class="p">,</span> 
+    <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> 
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Proporção Acolhidos (0-1)&#39;</span><span class="p">}</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fc7b6bf2f7678ba303518afb36c38bf0b077b24a0d74153814cde32a268960d4.png" src="_images/fc7b6bf2f7678ba303518afb36c38bf0b077b24a0d74153814cde32a268960d4.png" />
 </div>
 </div>
 </section>
@@ -1876,7 +2226,7 @@ Name: subsidio_valor_mensal, dtype: float64
 <span class="p">)</span>
 
 <span class="c1"># Configurar o gráfico</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Situação de Imóvel do SFA no Paraná (SC)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Situação de Imóvel do SFA em Santa Catarina (SC)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Contagem&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Situação de Imóvel&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -1887,7 +2237,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b7ff54d36bc651822c29b5e05e586919822ce5107fb77b62d5796230b1268dbd.png" src="_images/b7ff54d36bc651822c29b5e05e586919822ce5107fb77b62d5796230b1268dbd.png" />
+<img alt="_images/3bf57d76d3e71fb19681ce714a8f5cc2be3df0bc47c3a956fb46a1ba09e569c5.png" src="_images/3bf57d76d3e71fb19681ce714a8f5cc2be3df0bc47c3a956fb46a1ba09e569c5.png" />
 </div>
 </div>
 </section>
@@ -2022,7 +2372,7 @@ Name: subsidio_valor_mensal, dtype: float64
     <span class="p">)</span>
 
 <span class="c1"># Configurar o gráfico</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Situação da equipe do SFA no Paraná (SC)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Situação da equipe do SFA em Santa Catarina (SC)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Contagem&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Situação da Equipe&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -2033,7 +2383,7 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8368441d98d662b669367fe276a427afd274d15c138e7b1115b5a217bc7200c6.png" src="_images/8368441d98d662b669367fe276a427afd274d15c138e7b1115b5a217bc7200c6.png" />
+<img alt="_images/075e79532069abb50e8d512da9b0440ad60d4307513276f269883c31da211411.png" src="_images/075e79532069abb50e8d512da9b0440ad60d4307513276f269883c31da211411.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2212,8 +2562,8 @@ By Núcleo de Gestão da Informação e do Conhecimento - SEGES/MGI
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

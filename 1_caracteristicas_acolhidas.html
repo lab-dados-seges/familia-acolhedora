@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -39,10 +39,10 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -180,9 +180,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -716,7 +721,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qtd_acolhidas</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qtd_acolhidas</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -746,145 +751,145 @@
   </thead>
   <tbody>
     <tr>
-      <th>16</th>
+      <th>0</th>
       <td>PR</td>
       <td>Região Sul</td>
       <td>591</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>1</th>
       <td>MG</td>
       <td>Região Sudeste</td>
       <td>324</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>2</th>
       <td>SC</td>
       <td>Região Sul</td>
       <td>280</td>
     </tr>
     <tr>
-      <th>22</th>
+      <th>3</th>
       <td>SP</td>
       <td>Região Sudeste</td>
       <td>269</td>
     </tr>
     <tr>
-      <th>20</th>
+      <th>4</th>
       <td>RS</td>
       <td>Região Sul</td>
       <td>143</td>
     </tr>
     <tr>
-      <th>17</th>
+      <th>5</th>
       <td>RJ</td>
       <td>Região Sudeste</td>
       <td>129</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>6</th>
       <td>MS</td>
       <td>Região Centro Oeste</td>
       <td>67</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>7</th>
       <td>BA</td>
       <td>Região Nordeste</td>
       <td>46</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>8</th>
       <td>AM</td>
       <td>Região Norte</td>
       <td>43</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>9</th>
       <td>CE</td>
       <td>Região Nordeste</td>
       <td>34</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>10</th>
       <td>PE</td>
       <td>Região Nordeste</td>
       <td>31</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>11</th>
       <td>PB</td>
       <td>Região Nordeste</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>12</th>
       <td>DF</td>
       <td>Região Centro Oeste</td>
       <td>28</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>PA</td>
       <td>Região Norte</td>
       <td>26</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>14</th>
       <td>ES</td>
       <td>Região Sudeste</td>
       <td>20</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>15</th>
       <td>MA</td>
       <td>Região Nordeste</td>
       <td>17</td>
     </tr>
     <tr>
-      <th>11</th>
+      <th>16</th>
       <td>MT</td>
       <td>Região Centro Oeste</td>
       <td>17</td>
     </tr>
     <tr>
-      <th>18</th>
+      <th>17</th>
       <td>RN</td>
       <td>Região Nordeste</td>
       <td>11</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>18</th>
       <td>RO</td>
       <td>Região Norte</td>
       <td>10</td>
     </tr>
     <tr>
-      <th>0</th>
+      <th>19</th>
       <td>AC</td>
       <td>Região Norte</td>
       <td>9</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>20</th>
       <td>PI</td>
       <td>Região Nordeste</td>
       <td>9</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>21</th>
       <td>GO</td>
       <td>Região Centro Oeste</td>
       <td>8</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>22</th>
       <td>TO</td>
       <td>Região Norte</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>23</th>
       <td>AP</td>
       <td>Região Norte</td>
       <td>1</td>
@@ -913,7 +918,7 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;uf&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">regiao</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">)</span>
 
 <span class="c1"># Configurações do gráfico</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes acolhidos pelo SFA estão acolhendo por UF&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes acolhidos pelo SFA por UF&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;UF&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
@@ -924,7 +929,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dc84e74653b601462bf844a6a86e2a6d164cfaab7399f30328a8b655155624e1.png" src="_images/dc84e74653b601462bf844a6a86e2a6d164cfaab7399f30328a8b655155624e1.png" />
+<img alt="_images/0781ee8ee5378f7e61c7b0b378721a425c74a0c05f7ae032a3cdcd0207c70854.png" src="_images/0781ee8ee5378f7e61c7b0b378721a425c74a0c05f7ae032a3cdcd0207c70854.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1000,7 +1005,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ordenado_genero</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ordenado_genero</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1033,7 +1038,7 @@
   </thead>
   <tbody>
     <tr>
-      <th>16</th>
+      <th>0</th>
       <td>PR</td>
       <td>301</td>
       <td>290</td>
@@ -1042,7 +1047,7 @@
       <td>49.07</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>1</th>
       <td>MG</td>
       <td>177</td>
       <td>147</td>
@@ -1051,7 +1056,7 @@
       <td>45.37</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>2</th>
       <td>SC</td>
       <td>141</td>
       <td>139</td>
@@ -1060,7 +1065,7 @@
       <td>49.64</td>
     </tr>
     <tr>
-      <th>22</th>
+      <th>3</th>
       <td>SP</td>
       <td>140</td>
       <td>129</td>
@@ -1069,7 +1074,7 @@
       <td>47.96</td>
     </tr>
     <tr>
-      <th>20</th>
+      <th>4</th>
       <td>RS</td>
       <td>78</td>
       <td>65</td>
@@ -1078,7 +1083,7 @@
       <td>45.45</td>
     </tr>
     <tr>
-      <th>17</th>
+      <th>5</th>
       <td>RJ</td>
       <td>62</td>
       <td>67</td>
@@ -1087,7 +1092,7 @@
       <td>51.94</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>6</th>
       <td>MS</td>
       <td>38</td>
       <td>29</td>
@@ -1096,7 +1101,7 @@
       <td>43.28</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>7</th>
       <td>BA</td>
       <td>22</td>
       <td>24</td>
@@ -1105,7 +1110,7 @@
       <td>52.17</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>8</th>
       <td>AM</td>
       <td>25</td>
       <td>18</td>
@@ -1114,7 +1119,7 @@
       <td>41.86</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>9</th>
       <td>CE</td>
       <td>13</td>
       <td>21</td>
@@ -1123,7 +1128,7 @@
       <td>61.76</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>10</th>
       <td>PE</td>
       <td>17</td>
       <td>14</td>
@@ -1132,7 +1137,7 @@
       <td>45.16</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>11</th>
       <td>PB</td>
       <td>11</td>
       <td>19</td>
@@ -1141,7 +1146,7 @@
       <td>63.33</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>12</th>
       <td>DF</td>
       <td>19</td>
       <td>9</td>
@@ -1150,7 +1155,7 @@
       <td>32.14</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>PA</td>
       <td>15</td>
       <td>11</td>
@@ -1159,7 +1164,7 @@
       <td>42.31</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>14</th>
       <td>ES</td>
       <td>9</td>
       <td>11</td>
@@ -1168,7 +1173,7 @@
       <td>55.00</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>15</th>
       <td>MA</td>
       <td>8</td>
       <td>9</td>
@@ -1177,7 +1182,7 @@
       <td>52.94</td>
     </tr>
     <tr>
-      <th>11</th>
+      <th>16</th>
       <td>MT</td>
       <td>6</td>
       <td>11</td>
@@ -1186,7 +1191,7 @@
       <td>64.71</td>
     </tr>
     <tr>
-      <th>18</th>
+      <th>17</th>
       <td>RN</td>
       <td>5</td>
       <td>6</td>
@@ -1195,7 +1200,7 @@
       <td>54.55</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>18</th>
       <td>RO</td>
       <td>4</td>
       <td>6</td>
@@ -1204,7 +1209,7 @@
       <td>60.00</td>
     </tr>
     <tr>
-      <th>0</th>
+      <th>19</th>
       <td>AC</td>
       <td>9</td>
       <td>0</td>
@@ -1213,7 +1218,7 @@
       <td>0.00</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>20</th>
       <td>PI</td>
       <td>4</td>
       <td>5</td>
@@ -1222,7 +1227,7 @@
       <td>55.56</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>21</th>
       <td>GO</td>
       <td>8</td>
       <td>0</td>
@@ -1231,7 +1236,7 @@
       <td>0.00</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>22</th>
       <td>TO</td>
       <td>3</td>
       <td>2</td>
@@ -1240,7 +1245,7 @@
       <td>40.00</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>23</th>
       <td>AP</td>
       <td>0</td>
       <td>1</td>
@@ -1281,20 +1286,33 @@
 <span class="p">]</span>
 <span class="n">totais_por_faixa_masc</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">faixas_etarias_masc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
+<span class="c1"># Dicionário para mapear nomes das colunas em rótulos mais compreensíveis</span>
+<span class="n">mapeamento_labels_masc</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;qtd_masc_0_2&#39;</span><span class="p">:</span> <span class="s1">&#39;0-2&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_3_5&#39;</span><span class="p">:</span> <span class="s1">&#39;3-5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_6_11&#39;</span><span class="p">:</span> <span class="s1">&#39;6-11&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_12_13&#39;</span><span class="p">:</span> <span class="s1">&#39;12-13&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_14_15&#39;</span><span class="p">:</span> <span class="s1">&#39;14-15&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_16_17&#39;</span><span class="p">:</span> <span class="s1">&#39;16-17&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_masc_acima_18&#39;</span><span class="p">:</span> <span class="s1">&#39;18+&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># Aplicar o mapeamento para os rótulos do eixo x</span>
+<span class="n">rótulos_legiveis_masc</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapeamento_labels_masc</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
 <span class="c1"># Criação do gráfico de barras</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">rótulos_legiveis_masc</span><span class="p">,</span> <span class="n">totais_por_faixa_masc</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por faixa etária (masculino)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária (em anos)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/aef9a105664235792832938e0ca48d9a07b4adc0915349bfc4c8ff108a644097.png" src="_images/aef9a105664235792832938e0ca48d9a07b4adc0915349bfc4c8ff108a644097.png" />
+<img alt="_images/06a5868011b9591bfb28790c811562d6b2672d11a70ec7d80fa704d9557851fb.png" src="_images/06a5868011b9591bfb28790c811562d6b2672d11a70ec7d80fa704d9557851fb.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1306,20 +1324,84 @@
 <span class="p">]</span>
 <span class="n">totais_por_faixa_fem</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">faixas_etarias_fem</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
+<span class="c1"># Dicionário para mapear nomes das colunas em rótulos mais compreensíveis</span>
+<span class="n">mapeamento_labels_fem</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;qtd_fem_0_2&#39;</span><span class="p">:</span> <span class="s1">&#39;0-2&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_3_5&#39;</span><span class="p">:</span> <span class="s1">&#39;3-5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_6_11&#39;</span><span class="p">:</span> <span class="s1">&#39;6-11&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_12_13&#39;</span><span class="p">:</span> <span class="s1">&#39;12-13&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_14_15&#39;</span><span class="p">:</span> <span class="s1">&#39;14-15&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_16_17&#39;</span><span class="p">:</span> <span class="s1">&#39;16-17&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;qtd_fem_acima_18&#39;</span><span class="p">:</span> <span class="s1">&#39;18+&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># Aplicar o mapeamento para os rótulos do eixo x</span>
+<span class="n">rótulos_legiveis_fem</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapeamento_labels_fem</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
 <span class="c1"># Criação do gráfico de barras</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">rótulos_legiveis_fem</span><span class="p">,</span> <span class="n">totais_por_faixa_fem</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes por faixa etária (feminino)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária (em anos)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b7a4e7685f53280f7648a82e86f60cba6279c5b06d714d8b1cfc07d379a0aeaf.png" src="_images/b7a4e7685f53280f7648a82e86f60cba6279c5b06d714d8b1cfc07d379a0aeaf.png" />
+<img alt="_images/64b12ee4633f5270aa9135ae1901de58db9ed70aa3076a4adb81180f3e5fef40.png" src="_images/64b12ee4633f5270aa9135ae1901de58db9ed70aa3076a4adb81180f3e5fef40.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Soma das faixas etárias masculinas e femininas</span>
+<span class="n">faixas_etarias</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;0-2&#39;</span><span class="p">,</span> <span class="s1">&#39;3-5&#39;</span><span class="p">,</span> <span class="s1">&#39;6-11&#39;</span><span class="p">,</span> <span class="s1">&#39;12-13&#39;</span><span class="p">,</span> <span class="s1">&#39;14-15&#39;</span><span class="p">,</span> <span class="s1">&#39;16-17&#39;</span><span class="p">,</span> <span class="s1">&#39;18+&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Somar os valores por faixa etária</span>
+<span class="n">totais_masc</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_0_2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_3_5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_6_11&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_12_13&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_14_15&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_16_17&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_masc_acima_18&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="n">totais_fem</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_0_2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_3_5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_6_11&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_12_13&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_14_15&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_16_17&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fem_acima_18&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># Criar gráfico de barras empilhadas</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plotar barras masculinas e femininas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">faixas_etarias</span><span class="p">,</span> <span class="n">totais_masc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Masculino&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">faixas_etarias</span><span class="p">,</span> <span class="n">totais_fem</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">totais_masc</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
+
+<span class="c1"># Configurar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quantidade de Crianças/Adolescentes por Faixa Etária e Sexo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Faixa Etária&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Sexo&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fafcdb1f8c256eca45f0f8b19bb3dfe75a675721ff04c856ab4a7b83cfcd330a.png" src="_images/fafcdb1f8c256eca45f0f8b19bb3dfe75a675721ff04c856ab4a7b83cfcd330a.png" />
 </div>
 </div>
 </section>
@@ -1593,8 +1675,8 @@ By Núcleo de Gestão da Informação e do Conhecimento - SEGES/MGI
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
