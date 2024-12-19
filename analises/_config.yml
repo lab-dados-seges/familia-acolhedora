@@ -6,3 +6,6 @@ execute:
   execute_notebooks: "auto"  # Executar notebooks automaticamente
 html:
   baseurl: "/familia-acolhedora"
+launch_buttons:
+  binderhub_url: "https://mybinder.org"  # URL para suporte ao Binder
+  thebe: true                            # Habilitar Thebe para interatividade
