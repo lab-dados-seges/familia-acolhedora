@@ -223,6 +223,55 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/6_correlacoes.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -798,20 +847,20 @@
     </tr>
     <tr>
       <th>6</th>
+      <td>qtd_criancas_acolhidas</td>
+      <td>qtd_criancas_acolhidas_12meses</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
+      <th>7</th>
       <td>qtd_criancas_pardas</td>
       <td>qtd_masc_total</td>
       <td>0.83</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>qtd_masc_6_11</td>
       <td>qtd_masc_total</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>qtd_criancas_acolhidas</td>
-      <td>qtd_criancas_acolhidas_12meses</td>
       <td>0.83</td>
     </tr>
     <tr>
@@ -887,7 +936,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2073/2303352333.py:3: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2095/2303352333.py:3: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
 For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
@@ -1283,7 +1332,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/63dbfda9af2badb18eebc0693f375e66e83041b8d70102c6c6ec52658cd9a558.png" src="_images/63dbfda9af2badb18eebc0693f375e66e83041b8d70102c6c6ec52658cd9a558.png" />
+<img alt="_images/cf41b482f397396e8efc52d050023b8687aa97629036b0da7c9b4a45fbb295e9.png" src="_images/cf41b482f397396e8efc52d050023b8687aa97629036b0da7c9b4a45fbb295e9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1328,7 +1377,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/defaef2b3f2251a9c8794f9e2b47d87cbaa94be61f103c84511528e01e1887e7.png" src="_images/defaef2b3f2251a9c8794f9e2b47d87cbaa94be61f103c84511528e01e1887e7.png" />
+<img alt="_images/43f07f5d91a09c44f12f8b0592c1aba36ae0d88d92980a7eb53d9ff7c647ffe4.png" src="_images/43f07f5d91a09c44f12f8b0592c1aba36ae0d88d92980a7eb53d9ff7c647ffe4.png" />
 </div>
 </div>
 </section>
@@ -1409,7 +1458,7 @@ Name: ch_capacitacao_inicial, dtype: float64
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "executablebooks/jupyter-book",
             ref: "master",
         },
         codeMirrorConfig: {
