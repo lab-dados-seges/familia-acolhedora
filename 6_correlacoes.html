@@ -400,18 +400,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;statsmodels&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -773,7 +761,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cbe80e72b972037c4802c649e5b7f52e463cebdc9b32f5771ba14081da2f6032.png" src="_images/cbe80e72b972037c4802c649e5b7f52e463cebdc9b32f5771ba14081da2f6032.png" />
+<img alt="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" src="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -847,13 +835,13 @@
     <tr>
       <th>3</th>
       <td>qtd_criancas_acolhidas</td>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
+      <td>qtd_criancas_brancas</td>
       <td>0.86</td>
     </tr>
     <tr>
       <th>4</th>
       <td>qtd_criancas_acolhidas</td>
-      <td>qtd_criancas_brancas</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>0.86</td>
     </tr>
     <tr>
@@ -864,26 +852,26 @@
     </tr>
     <tr>
       <th>6</th>
-      <td>qtd_criancas_acolhidas</td>
       <td>qtd_criancas_acolhidas_12meses</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>0.83</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>qtd_criancas_pardas</td>
-      <td>qtd_masc_total</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>8</th>
       <td>qtd_masc_6_11</td>
       <td>qtd_masc_total</td>
       <td>0.83</td>
     </tr>
     <tr>
+      <th>8</th>
+      <td>qtd_criancas_pardas</td>
+      <td>qtd_masc_total</td>
+      <td>0.83</td>
+    </tr>
+    <tr>
       <th>9</th>
+      <td>qtd_criancas_acolhidas</td>
       <td>qtd_criancas_acolhidas_12meses</td>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>0.83</td>
     </tr>
     <tr>
@@ -894,13 +882,13 @@
     </tr>
     <tr>
       <th>11</th>
-      <td>qtd_criancas_tempo_servico_7_12meses</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
+      <td>qtd_criancas_tempo_servico_7_12meses</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
@@ -939,7 +927,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(64)
 </pre></div>
 </div>
 </div>
@@ -949,6 +937,17 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Como há apenas 64 nulos em um universo de 620 linhas, atribuí 0 aos valores nulos, supondo que não há subsídio mensal - </span>
 <span class="c1"># ainda que a resposta pode ter sido Não Sei</span>
 <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2088/2303352333.py:3: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_dados_gerais[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
 </pre></div>
 </div>
 </div>
@@ -1051,7 +1050,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" src="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" />
+<img alt="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" src="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1082,10 +1081,11 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Não                  299
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num_atual_fam_suficiente
+Não                  299
 Sim                  265
 Não sabe informar     56
-Name: num_atual_fam_suficiente, dtype: int64
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1113,7 +1113,7 @@ Name: num_atual_fam_suficiente, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
 </pre></div>
 </div>
 </div>
@@ -1125,7 +1125,7 @@ Name: num_atual_fam_suficiente, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
 </pre></div>
 </div>
 </div>
@@ -1139,9 +1139,11 @@ Name: num_atual_fam_suficiente, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Não    299
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num_atual_fam_suficiente
+Não    299
 Sim    265
-Name: num_atual_fam_suficiente, dtype: int64
+Name: count, dtype: int64
+qtd_fam_aptas_ou_acolhendo
 2     97
 0     93
 1     72
@@ -1152,34 +1154,34 @@ Name: num_atual_fam_suficiente, dtype: int64
 7     25
 8     22
 9     13
-11    11
 15    11
+11    11
 13     9
 10     7
-12     6
 20     6
+12     6
 17     5
 18     4
 14     4
 16     4
 23     3
-42     2
-26     2
-32     2
 22     2
 30     2
-19     1
-59     1
-41     1
-43     1
-25     1
-68     1
+32     2
+42     2
+26     2
 28     1
-24     1
-33     1
 55     1
+33     1
+25     1
+24     1
+68     1
+59     1
+43     1
+41     1
+19     1
 45     1
-Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1233,7 +1235,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/21215b42200e3f1e672f8ee776474e872a0f3dc17564a06bf8dce949451927fd.png" src="_images/21215b42200e3f1e672f8ee776474e872a0f3dc17564a06bf8dce949451927fd.png" />
+<img alt="_images/cdcecf1c08fbb0e6bcafc65c9ad7907db9e056e62b2013729927959849fb8106.png" src="_images/cdcecf1c08fbb0e6bcafc65c9ad7907db9e056e62b2013729927959849fb8106.png" />
 </div>
 </div>
 </section>
@@ -1254,7 +1256,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
 </pre></div>
 </div>
 </div>
@@ -1278,7 +1280,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6676469a42ece17727c4ddbeb45eb7f2b79064f88f5cb5dd978a88c4dd350312.png" src="_images/6676469a42ece17727c4ddbeb45eb7f2b79064f88f5cb5dd978a88c4dd350312.png" />
+<img alt="_images/32130a30cafd259a04e7cb3df25a03a40f406bca17875f51a3eec6dc27fb85a3.png" src="_images/32130a30cafd259a04e7cb3df25a03a40f406bca17875f51a3eec6dc27fb85a3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1335,7 +1337,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0e3e1e3783093665690d2c59853e4ad900202926a4675fa4fe680b3ed9d5841b.png" src="_images/0e3e1e3783093665690d2c59853e4ad900202926a4675fa4fe680b3ed9d5841b.png" />
+<img alt="_images/20bbc327274acfc64d2e064bc1dc11171273e7969ff416aa1d46f012b58fc179.png" src="_images/20bbc327274acfc64d2e064bc1dc11171273e7969ff416aa1d46f012b58fc179.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1380,7 +1382,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c0f614dd7e37d27e05b3823eda8a32cb713989fde497ce06e57e79f417047a92.png" src="_images/c0f614dd7e37d27e05b3823eda8a32cb713989fde497ce06e57e79f417047a92.png" />
+<img alt="_images/72dad9be41fd6fc7cfc438d0cf29b3970e45fa505e223c1f4075c64b7220d539.png" src="_images/72dad9be41fd6fc7cfc438d0cf29b3970e45fa505e223c1f4075c64b7220d539.png" />
 </div>
 </div>
 </section>
@@ -1405,7 +1407,7 @@ Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
 </pre></div>
 </div>
 </div>
@@ -1497,7 +1499,7 @@ Name: ch_capacitacao_inicial, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/120477f690e4e892a44dd22df2556acaf4c1b40614f79c4f355a365cfd1364b6.png" src="_images/120477f690e4e892a44dd22df2556acaf4c1b40614f79c4f355a365cfd1364b6.png" />
+<img alt="_images/6520a54a5c397aae69a05fdc1f8990a77aeebb8c3e766806300de252071d5db2.png" src="_images/6520a54a5c397aae69a05fdc1f8990a77aeebb8c3e766806300de252071d5db2.png" />
 </div>
 </div>
 </section>
@@ -1604,7 +1606,7 @@ Name: ch_capacitacao_inicial, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3eae369ce58a0ea26be3a6e7cee1aa3ed45c746e5a136c562b23e88964df859c.png" src="_images/3eae369ce58a0ea26be3a6e7cee1aa3ed45c746e5a136c562b23e88964df859c.png" />
+<img alt="_images/cc1b9ddc56b013b1f5ec2c0b8a256473b27370a9e271adb1e3b28f508de222a6.png" src="_images/cc1b9ddc56b013b1f5ec2c0b8a256473b27370a9e271adb1e3b28f508de222a6.png" />
 </div>
 </div>
 </section>
@@ -1716,7 +1718,7 @@ Name: ch_capacitacao_inicial, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/42952140f6a14556bd0831a41cd64e7bfe893b20e150952f9f5062143e9c2acf.png" src="_images/42952140f6a14556bd0831a41cd64e7bfe893b20e150952f9f5062143e9c2acf.png" />
+<img alt="_images/53196e9b0ce9a9fa55e7a69bd8b250ec06e87ef57a81c945d9f7828c393397ba.png" src="_images/53196e9b0ce9a9fa55e7a69bd8b250ec06e87ef57a81c945d9f7828c393397ba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1775,7 +1777,7 @@ Name: ch_capacitacao_inicial, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a9fbec9c4685398bb782fba44db10cb3f96890d0929e027b9eee9ed06b5b2d96.png" src="_images/a9fbec9c4685398bb782fba44db10cb3f96890d0929e027b9eee9ed06b5b2d96.png" />
+<img alt="_images/dde44b78071d4e8d8ab42ceb7ad3400438546ae83e7736b453cf1d9bef3d8ade.png" src="_images/dde44b78071d4e8d8ab42ceb7ad3400438546ae83e7736b453cf1d9bef3d8ade.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1823,7 +1825,7 @@ Name: ch_capacitacao_inicial, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4be9fefe274668e57a161a7198730eaec2d9d25dd6eadc9cdb58319d5c396f65.png" src="_images/4be9fefe274668e57a161a7198730eaec2d9d25dd6eadc9cdb58319d5c396f65.png" />
+<img alt="_images/c9945dda7684ed5f80caebaf24198f032c7283baf31c81dc540a53552556870b.png" src="_images/c9945dda7684ed5f80caebaf24198f032c7283baf31c81dc540a53552556870b.png" />
 </div>
 </div>
 </section>
@@ -1872,7 +1874,7 @@ Dep. Variable:     qtd_fam_aptas_ou_acolhendo   R-squared:                      
 Model:                                    OLS   Adj. R-squared:                  0.058
 Method:                         Least Squares   F-statistic:                     6.063
 Date:                        Mon, 30 Dec 2024   Prob (F-statistic):           7.72e-07
-Time:                                09:59:32   Log-Likelihood:                -1982.6
+Time:                                13:32:09   Log-Likelihood:                -1982.6
 No. Observations:                         576   AIC:                             3981.
 Df Residuals:                             568   BIC:                             4016.
 Df Model:                                   7                                         
@@ -1920,7 +1922,17 @@ Notes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/fd4c7a72befb518cd5312d2ecbafb45adf278152dd72d2fcf6ea7eeec8ddace3.png" src="_images/fd4c7a72befb518cd5312d2ecbafb45adf278152dd72d2fcf6ea7eeec8ddace3.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ordenar os coeficientes em termos absolutos (exceto o intercepto)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">coeficientes_sem_intercepto</span> <span class="o">=</span> <span class="n">coeficientes</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;const&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Criar o gráfico</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;coeficientes&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </section>
