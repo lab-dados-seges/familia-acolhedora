@@ -1,0 +1,104 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.9.20/x64/lib/python3.9/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Definir cores distintas para cada categoria
+cores_distintas = {
+    'Exerce exclusivamente a função de coordenador(a) deste serviço': '#4CAF50',  # Verde
+    'Exerce concomitantemente a função de coordenador(a) deste serviço e de outro serviço socioassistencial': '#2196F3',  # Azul
+    'Acumula as funções de coordenadora(or) e de técnica(o) neste serviço': '#FFC107',  # Amarelo
+    'Acumula as funções de coordenadora(or) com outra atividade': '#9C27B0',  # Roxo
+    'Não há coordenadora(or) neste serviço': '#FF5722',  # Vermelho
+}
+
+# Criar o gráfico de barras empilhadas
+fig, ax = plt.subplots(figsize=(18, 16))  # Aumentar o tamanho total da figura
+
+# Gráfico de barras empilhadas com cores personalizadas
+grafico_data_coordenador_pct.plot(
+    kind='bar',
+    stacked=True,
+    ax=ax,
+    color=[cores_distintas[col] for col in grafico_data_coordenador_pct.columns],
+    edgecolor='black',
+    width=0.85  # Aumentar a largura das barras
+)
+
+# Adicionar valores dentro das barras
+for i, column in enumerate(grafico_data_coordenador_pct.columns):
+    for idx in range(len(grafico_data_coordenador_pct)):
+        value = grafico_data_coordenador_pct.iloc[idx, i]
+        if value > 0:  # Exibir apenas valores maiores que zero
+            cumulative_value = grafico_data_coordenador_pct.iloc[idx, :i].sum()
+            ax.text(
+                idx, 
+                cumulative_value + value / 2,  # Posicionar no meio da barra
+                f'{value:.1f}%',  # Formatar para porcentagem
+                ha='center',
+                va='center',
+                fontsize=10,  # Mantém a fonte padrão, menor que o tamanho das barras
+                color='black'  # Alterar para preto
+            )
+
+# Ajustar rótulos e título
+ax.set_title('Distribuição Percentual da Situação do Coordenador do SFA por UF', fontsize=20, pad=40)  # Mais espaço no título
+ax.set_xlabel('UF', fontsize=16)
+ax.set_ylabel('Percentual (%)', fontsize=16)
+ax.set_xticks(range(len(grafico_data_coordenador_pct.index)))
+ax.set_xticklabels(grafico_data_coordenador_pct.index, rotation=45, fontsize=14)
+ax.set_yticks(range(0, 101, 10))  # Definir intervalos de 10% no eixo Y
+ax.tick_params(axis='y', labelsize=14)
+
+# Reposicionar e redimensionar a legenda
+ax.legend(
+    title='Situação do Coordenador',
+    loc='upper center',
+    bbox_to_anchor=(0.5, -0.12),  # Empurrar ainda mais para baixo
+    ncol=2,  # Ajustar número de colunas
+    fontsize=14
+)
+
+# Ajustar espaçamento manualmente para maximizar o espaço do gráfico
+plt.subplots_adjust(
+    top=0.88,  # Espaço superior para o título
+    bottom=0.25,  # Espaço inferior para a legenda
+    left=0.2,  # Margem esquerda
+    right=0.9  # Margem direita
+)
+
+# Mostrar o gráfico
+plt.show()
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[61], line 14[0m
+[1;32m     11[0m fig, ax [38;5;241m=[39m plt[38;5;241m.[39msubplots(figsize[38;5;241m=[39m([38;5;241m18[39m, [38;5;241m16[39m))  [38;5;66;03m# Aumentar o tamanho total da figura[39;00m
+[1;32m     13[0m [38;5;66;03m# Gráfico de barras empilhadas com cores personalizadas[39;00m
+[0;32m---> 14[0m [43mgrafico_data_coordenador_pct[49m[38;5;241m.[39mplot(
+[1;32m     15[0m     kind[38;5;241m=[39m[38;5;124m'[39m[38;5;124mbar[39m[38;5;124m'[39m,
+[1;32m     16[0m     stacked[38;5;241m=[39m[38;5;28;01mTrue[39;00m,
+[1;32m     17[0m     ax[38;5;241m=[39max,
+[1;32m     18[0m     color[38;5;241m=[39m[cores_distintas[col] [38;5;28;01mfor[39;00m col [38;5;129;01min[39;00m grafico_data_coordenador_pct[38;5;241m.[39mcolumns],
+[1;32m     19[0m     edgecolor[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m,
+[1;32m     20[0m     width[38;5;241m=[39m[38;5;241m0.85[39m  [38;5;66;03m# Aumentar a largura das barras[39;00m
+[1;32m     21[0m )
+[1;32m     23[0m [38;5;66;03m# Adicionar valores dentro das barras[39;00m
+[1;32m     24[0m [38;5;28;01mfor[39;00m i, column [38;5;129;01min[39;00m [38;5;28menumerate[39m(grafico_data_coordenador_pct[38;5;241m.[39mcolumns):
+
+[0;31mNameError[0m: name 'grafico_data_coordenador_pct' is not defined
+

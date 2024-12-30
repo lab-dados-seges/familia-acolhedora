@@ -374,6 +374,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custo-mensal-de-manutencao">7.2.4. Custo mensal de manutenção</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situacao-do-imovel-onde-funciona-a-sede-do-sfa">7.2.5. Situação do imóvel onde funciona a sede do SFA</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipe-tecnica-exclusiva">7.2.6. Equipe técnica exclusiva</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acoes-de-divulgacao">7.2.7. Ações de divulgação</a></li>
 </ul>
 </li>
 </ul>
@@ -1388,14 +1389,14 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2123/4234166614.py:4: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2128/4234166614.py:4: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
 For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
 
 
   df_pr[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
-/tmp/ipykernel_2123/4234166614.py:5: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+/tmp/ipykernel_2128/4234166614.py:5: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
 The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
 
 For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
@@ -2485,6 +2486,84 @@ Name: subsidio_valor_mensal, dtype: float64
 </div>
 </div>
 </section>
+<section id="acoes-de-divulgacao">
+<h3>7.2.7. Ações de divulgação<a class="headerlink" href="#acoes-de-divulgacao" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colunas_divulgacao</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;divulgacao_outdoors_busdoors&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_materiais_grande_circ&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_radio_tv_impressa&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_eventos_palestras&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_redes_sociais&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_articulacao_liderancas&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;divulgacao_outros&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrar os dados para PR</span>
+<span class="n">df_pr_divulgacao</span> <span class="o">=</span> <span class="n">df_pr</span><span class="p">[</span><span class="n">colunas_divulgacao</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico de calor para PR</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_pr_divulgacao</span><span class="p">[[</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span> <span class="s1">&#39;Não&#39;</span><span class="p">]],</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+    <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Atividades de Divulgação para captar novas famílias (PR)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Resposta&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Atividades&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/60cadfc2bb8025e549cce68b895fdc941fbd9e9552a5348957930319b7a0c6fc.png" src="_images/60cadfc2bb8025e549cce68b895fdc941fbd9e9552a5348957930319b7a0c6fc.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filtrar os dados para SC</span>
+<span class="n">df_sc_divulgacao</span> <span class="o">=</span> <span class="n">df_sc</span><span class="p">[</span><span class="n">colunas_divulgacao</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico de calor para SC</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">df_sc_divulgacao</span><span class="p">[[</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span> <span class="s1">&#39;Não&#39;</span><span class="p">]],</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">,</span>
+    <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Atividades de Divulgação para captar novas famílias (SC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Resposta&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Atividades&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5cb820b49717ad652df3a2222cd5ee0441dcf5979b8560cd31a6d49859195957.png" src="_images/5cb820b49717ad652df3a2222cd5ee0441dcf5979b8560cd31a6d49859195957.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -2561,6 +2640,7 @@ Name: subsidio_valor_mensal, dtype: float64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custo-mensal-de-manutencao">7.2.4. Custo mensal de manutenção</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situacao-do-imovel-onde-funciona-a-sede-do-sfa">7.2.5. Situação do imóvel onde funciona a sede do SFA</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipe-tecnica-exclusiva">7.2.6. Equipe técnica exclusiva</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acoes-de-divulgacao">7.2.7. Ações de divulgação</a></li>
 </ul>
 </li>
 </ul>

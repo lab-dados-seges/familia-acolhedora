@@ -371,6 +371,10 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-se-o-numero-e-suficiente">6.3. Correlação entre quantidade de famílias aptas/acolhendo e se o número é suficiente</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-exclusividade-da-equipe-tecnica-do-sfa">6.4. Correlação entre quantidade de famílias aptas/acolhendo e exclusividade da equipe técnica do SFA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-carga-horaria-de-capacitacao-inicial-das-familias">6.5. Correlação entre quantidade de famílias aptas/acolhendo e carga horária de capacitação inicial das famílias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-quantidade-de-criancas-adolescentes-acolhidos">6.6. Correlação entre quantidade de famílias aptas/acolhendo e quantidade de crianças/adolescentes acolhidos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-frequencia-de-acompanhamento-e-quantidade-de-familias-aptas-acolhendo">6.7. Correlação entre frequência de acompanhamento e quantidade de famílias aptas/acolhendo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-frequencia-de-acompanhamento-e-exclusividade-ou-nao-da-equipe-tecnica-do-sfa">6.8. Correlação entre frequência de acompanhamento e exclusividade ou não da equipe técnica do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-divulgacao-para-captas-novas-familias">6.9. Correlação entre quantidade de famílias aptas/acolhendo e divulgação para captas novas famílias</a></li>
 </ul>
             </nav>
         </div>
@@ -392,6 +396,19 @@
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;statsmodels&#39;
 </pre></div>
 </div>
 </div>
@@ -756,7 +773,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" src="_images/2d049b67513ca68a3c28c4fb8d3a3dc8a56460900603f43b207e5be9933f42ba.png" />
+<img alt="_images/cbe80e72b972037c4802c649e5b7f52e463cebdc9b32f5771ba14081da2f6032.png" src="_images/cbe80e72b972037c4802c649e5b7f52e463cebdc9b32f5771ba14081da2f6032.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -830,13 +847,13 @@
     <tr>
       <th>3</th>
       <td>qtd_criancas_acolhidas</td>
-      <td>qtd_criancas_brancas</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>0.86</td>
     </tr>
     <tr>
       <th>4</th>
       <td>qtd_criancas_acolhidas</td>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
+      <td>qtd_criancas_brancas</td>
       <td>0.86</td>
     </tr>
     <tr>
@@ -877,13 +894,13 @@
     </tr>
     <tr>
       <th>11</th>
-      <td>qtd_fam_aptas_ou_acolhendo</td>
+      <td>qtd_criancas_tempo_servico_7_12meses</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>qtd_criancas_tempo_servico_7_12meses</td>
+      <td>qtd_fam_aptas_ou_acolhendo</td>
       <td>qtd_masc_total</td>
       <td>0.81</td>
     </tr>
@@ -922,7 +939,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(64)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
 </pre></div>
 </div>
 </div>
@@ -932,17 +949,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Como há apenas 64 nulos em um universo de 620 linhas, atribuí 0 aos valores nulos, supondo que não há subsídio mensal - </span>
 <span class="c1"># ainda que a resposta pode ter sido Não Sei</span>
 <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;subsidio_valor_mensal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2095/2303352333.py:3: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
-The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
-
-For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
-
-
-  df_dados_gerais[&#39;subsidio_valor_mensal&#39;].fillna(0, inplace=True)
 </pre></div>
 </div>
 </div>
@@ -1045,7 +1051,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" src="_images/191d1566b7678f6843afd0034012bc5450efcad329920bc41ec8c92321f21e49.png" />
+<img alt="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" src="_images/c9b64f6314718c1667f448ae977c2638f403a7030b285ab6479485e4334b93ee.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1076,11 +1082,10 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num_atual_fam_suficiente
-Não                  299
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Não                  299
 Sim                  265
 Não sabe informar     56
-Name: count, dtype: int64
+Name: num_atual_fam_suficiente, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1108,7 +1113,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1120,7 +1125,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1134,11 +1139,9 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num_atual_fam_suficiente
-Não    299
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Não    299
 Sim    265
-Name: count, dtype: int64
-qtd_fam_aptas_ou_acolhendo
+Name: num_atual_fam_suficiente, dtype: int64
 2     97
 0     93
 1     72
@@ -1149,34 +1152,34 @@ qtd_fam_aptas_ou_acolhendo
 7     25
 8     22
 9     13
-15    11
 11    11
+15    11
 13     9
 10     7
-20     6
 12     6
+20     6
 17     5
 18     4
 14     4
 16     4
 23     3
-22     2
-30     2
-32     2
 42     2
 26     2
-28     1
-55     1
-33     1
-25     1
-24     1
-68     1
-59     1
-43     1
-41     1
+32     2
+22     2
+30     2
 19     1
+59     1
+41     1
+43     1
+25     1
+68     1
+28     1
+24     1
+33     1
+55     1
 45     1
-Name: count, dtype: int64
+Name: qtd_fam_aptas_ou_acolhendo, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -1230,7 +1233,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cdcecf1c08fbb0e6bcafc65c9ad7907db9e056e62b2013729927959849fb8106.png" src="_images/cdcecf1c08fbb0e6bcafc65c9ad7907db9e056e62b2013729927959849fb8106.png" />
+<img alt="_images/21215b42200e3f1e672f8ee776474e872a0f3dc17564a06bf8dce949451927fd.png" src="_images/21215b42200e3f1e672f8ee776474e872a0f3dc17564a06bf8dce949451927fd.png" />
 </div>
 </div>
 </section>
@@ -1251,7 +1254,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1275,7 +1278,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/32130a30cafd259a04e7cb3df25a03a40f406bca17875f51a3eec6dc27fb85a3.png" src="_images/32130a30cafd259a04e7cb3df25a03a40f406bca17875f51a3eec6dc27fb85a3.png" />
+<img alt="_images/6676469a42ece17727c4ddbeb45eb7f2b79064f88f5cb5dd978a88c4dd350312.png" src="_images/6676469a42ece17727c4ddbeb45eb7f2b79064f88f5cb5dd978a88c4dd350312.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1332,7 +1335,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cf41b482f397396e8efc52d050023b8687aa97629036b0da7c9b4a45fbb295e9.png" src="_images/cf41b482f397396e8efc52d050023b8687aa97629036b0da7c9b4a45fbb295e9.png" />
+<img alt="_images/0e3e1e3783093665690d2c59853e4ad900202926a4675fa4fe680b3ed9d5841b.png" src="_images/0e3e1e3783093665690d2c59853e4ad900202926a4675fa4fe680b3ed9d5841b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1377,7 +1380,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/43f07f5d91a09c44f12f8b0592c1aba36ae0d88d92980a7eb53d9ff7c647ffe4.png" src="_images/43f07f5d91a09c44f12f8b0592c1aba36ae0d88d92980a7eb53d9ff7c647ffe4.png" />
+<img alt="_images/c0f614dd7e37d27e05b3823eda8a32cb713989fde497ce06e57e79f417047a92.png" src="_images/c0f614dd7e37d27e05b3823eda8a32cb713989fde497ce06e57e79f417047a92.png" />
 </div>
 </div>
 </section>
@@ -1402,7 +1405,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1449,6 +1452,475 @@ Name: ch_capacitacao_inicial, dtype: float64
 Índice de correlação (Spearman): 0.27
 </pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-quantidade-de-criancas-adolescentes-acolhidos">
+<h2>6.6. Correlação entre quantidade de famílias aptas/acolhendo e quantidade de crianças/adolescentes acolhidos<a class="headerlink" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-quantidade-de-criancas-adolescentes-acolhidos" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcular o índice de correlação de Pearson</span>
+<span class="n">correlacao_pearson</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">],</span>
+    <span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Índice de correlação (Pearson): </span><span class="si">{</span><span class="n">correlacao_pearson</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Índice de correlação (Pearson): 0.86
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o gráfico de dispersão com regplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_dados_gerais</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;qtd_criancas_acolhidas&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span><span class="p">,</span>
+    <span class="n">scatter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}</span>  <span class="c1"># Linha de regressão em vermelho</span>
+<span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlação entre Crianças/Adolescentes Acolhidos e Famílias Acolhendo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes Acolhidos&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de Famílias Acolhendo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/120477f690e4e892a44dd22df2556acaf4c1b40614f79c4f355a365cfd1364b6.png" src="_images/120477f690e4e892a44dd22df2556acaf4c1b40614f79c4f355a365cfd1364b6.png" />
+</div>
+</div>
+</section>
+<section id="correlacao-entre-frequencia-de-acompanhamento-e-quantidade-de-familias-aptas-acolhendo">
+<h2>6.7. Correlação entre frequência de acompanhamento e quantidade de famílias aptas/acolhendo<a class="headerlink" href="#correlacao-entre-frequencia-de-acompanhamento-e-quantidade-de-familias-aptas-acolhendo" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o mapeamento ordinal</span>
+<span class="n">ordem_frequencia</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Semanalmente&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;Quinzenalmente&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;Mensalmente&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;Bimestralmente&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;Trimestralmente&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s1">&#39;Semestralmente&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">&#39;Apenas quando há necessidade&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="s1">&#39;A família não é acompanhada&#39;</span><span class="p">:</span> <span class="mi">8</span>
+<span class="p">}</span>
+
+<span class="c1"># Aplicar o mapeamento à variável de frequência</span>
+<span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;freq_acompanh_fam_acolhedora&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">ordem_frequencia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlacao_freq_fam</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[[</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">,</span> <span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;spearman&#39;</span><span class="p">)</span>
+<span class="n">correlacao_freq_fam</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>freq_acompanh_ordinal</th>
+      <th>qtd_fam_aptas_ou_acolhendo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>freq_acompanh_ordinal</th>
+      <td>1.000000</td>
+      <td>-0.267644</td>
+    </tr>
+    <tr>
+      <th>qtd_fam_aptas_ou_acolhendo</th>
+      <td>-0.267644</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dicionário para mapear os valores ordinais de volta às frequências</span>
+<span class="n">legenda_frequencias</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Semanalmente&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Quinzenalmente&#39;</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Mensalmente&#39;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;Bimestralmente&#39;</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Trimestralmente&#39;</span><span class="p">,</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="s1">&#39;Semestralmente&#39;</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="s1">&#39;Apenas quando há necessidade&#39;</span><span class="p">,</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="s1">&#39;A família não é acompanhada&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># Criar o boxplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_dados_gerais</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relação entre Frequência de Acompanhamento e Quantidade de Famílias Aptas/Acolhendo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frequência de Acompanhamento (Ordinal)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de Famílias Aptas&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adicionar a legenda personalizada ao lado do gráfico</span>
+<span class="n">legenda_texto</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">legenda_frequencias</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">legenda_texto</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ajustar o layout para acomodar a legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Reduz o espaço do gráfico para caber a legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3eae369ce58a0ea26be3a6e7cee1aa3ed45c746e5a136c562b23e88964df859c.png" src="_images/3eae369ce58a0ea26be3a6e7cee1aa3ed45c746e5a136c562b23e88964df859c.png" />
+</div>
+</div>
+</section>
+<section id="correlacao-entre-frequencia-de-acompanhamento-e-exclusividade-ou-nao-da-equipe-tecnica-do-sfa">
+<h2>6.8. Correlação entre frequência de acompanhamento e exclusividade ou não da equipe técnica do SFA<a class="headerlink" href="#correlacao-entre-frequencia-de-acompanhamento-e-exclusividade-ou-nao-da-equipe-tecnica-do-sfa" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mapear exclusividade da equipe técnica para uma escala ordinal</span>
+<span class="n">mapeamento_exclusividade_tec</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Todas(os) as(os) profissionais são exclusivos&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;Parte da equipe é exclusiva&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;Não há profissionais exclusivas(os) do serviço&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;Não há equipe técnica neste Serviço&#39;</span><span class="p">:</span> <span class="mi">4</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar uma nova coluna para a escala ordinal</span>
+<span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;equipe_tec_exclusiva_ordinal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;equipe_tec_exclusiva_saf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapeamento_exclusividade_tec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlacao_freq_tec</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[[</span><span class="s1">&#39;equipe_tec_exclusiva_ordinal&#39;</span><span class="p">,</span> <span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;spearman&#39;</span><span class="p">)</span>
+<span class="n">correlacao_freq_tec</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>equipe_tec_exclusiva_ordinal</th>
+      <th>freq_acompanh_ordinal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>equipe_tec_exclusiva_ordinal</th>
+      <td>1.000000</td>
+      <td>0.274624</td>
+    </tr>
+    <tr>
+      <th>freq_acompanh_ordinal</th>
+      <td>0.274624</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcular o índice de correlação de Pearson</span>
+<span class="n">correlacao_pearson</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;equipe_tec_exclusiva_ordinal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">],</span>
+    <span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Índice de correlação (Pearson): </span><span class="si">{</span><span class="n">correlacao_pearson</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Índice de correlação (Pearson): 0.26
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o gráfico de dispersão com regplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_dados_gerais</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;equipe_tec_exclusiva_ordinal&#39;</span><span class="p">,</span>
+    <span class="n">scatter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+    <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}</span>  <span class="c1"># Linha de regressão em vermelho</span>
+<span class="p">)</span>
+
+<span class="c1"># Configurações do gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlação entre Crianças/Adolescentes Acolhidos e Famílias Acolhendo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de crianças/adolescentes Acolhidos&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Quantidade de Famílias Acolhendo&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/42952140f6a14556bd0831a41cd64e7bfe893b20e150952f9f5062143e9c2acf.png" src="_images/42952140f6a14556bd0831a41cd64e7bfe893b20e150952f9f5062143e9c2acf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar uma tabela de contingência</span>
+<span class="n">contingencia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;freq_acompanh_ordinal&#39;</span><span class="p">],</span>
+    <span class="n">df_dados_gerais</span><span class="p">[</span><span class="s1">&#39;equipe_tec_exclusiva_ordinal&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Calcular as proporções para cada frequência de acompanhamento</span>
+<span class="n">contingencia_pct</span> <span class="o">=</span> <span class="n">contingencia</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Definir os rótulos para a exclusividade da equipe técnica</span>
+<span class="n">rótulos_exclusividade</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Todas(os) as(os) profissionais são exclusivos&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Parte da equipe é exclusiva&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Não há profissionais exclusivas(os) do serviço&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Não há equipe técnica neste Serviço&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Criar o gráfico de barras empilhadas</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">contingencia_pct</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#4CAF50&#39;</span><span class="p">,</span> <span class="s1">&#39;#2196F3&#39;</span><span class="p">,</span> <span class="s1">&#39;#FFC107&#39;</span><span class="p">,</span> <span class="s1">&#39;#FF5722&#39;</span><span class="p">],</span>  <span class="c1"># Cores personalizadas</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Ajustar os rótulos e título</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribuição Percentual da Exclusividade da Equipe Técnica por Frequência de Acompanhamento&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Frequência de Acompanhamento (Ordinal)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Percentual (%)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">contingencia_pct</span><span class="o">.</span><span class="n">index</span><span class="p">)))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;Semanalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Quinzenalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Mensalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Trimestralmente&#39;</span><span class="p">,</span> 
+     <span class="s1">&#39;Bimestralmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Semestralmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Apenas quando necessário&#39;</span><span class="p">,</span> <span class="s1">&#39;Não acompanhada&#39;</span><span class="p">],</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span>
+<span class="p">)</span>
+
+<span class="c1"># Adicionar a legenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exclusividade da Equipe Técnica&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="n">rótulos_exclusividade</span><span class="p">,</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a9fbec9c4685398bb782fba44db10cb3f96890d0929e027b9eee9ed06b5b2d96.png" src="_images/a9fbec9c4685398bb782fba44db10cb3f96890d0929e027b9eee9ed06b5b2d96.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criar o heatmap com a tabela de contingência</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">contingencia_pct</span><span class="p">,</span>
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.1f&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span>
+    <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Percentual (%)&#39;</span><span class="p">},</span>
+    <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span>  <span class="c1"># Adicionar linhas entre os quadrados</span>
+<span class="p">)</span>
+
+<span class="c1"># Ajustar os rótulos e título</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Frequência de Acompanhamento vs Exclusividade da Equipe Técnica&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Exclusividade da Equipe Técnica&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequência de Acompanhamento&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Ajustar os rótulos do eixo X e Y</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rótulos_exclusividade</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="n">rótulos_exclusividade</span><span class="p">,</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>  <span class="c1"># Inclinar os rótulos para melhor leitura</span>
+    <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>  <span class="c1"># Alinhar os rótulos à direita</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span>
+    <span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">contingencia_pct</span><span class="o">.</span><span class="n">index</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;Semanalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Quinzenalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Mensalmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Trimestralmente&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;Bimestralmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Semestralmente&#39;</span><span class="p">,</span> <span class="s1">&#39;Apenas quando necessário&#39;</span><span class="p">,</span> <span class="s1">&#39;Não acompanhada&#39;</span>
+    <span class="p">],</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>  <span class="c1"># Manter os rótulos do eixo Y na horizontal</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span>
+<span class="p">)</span>
+
+<span class="c1"># Ajustar layout para evitar sobreposição</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Mostrar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4be9fefe274668e57a161a7198730eaec2d9d25dd6eadc9cdb58319d5c396f65.png" src="_images/4be9fefe274668e57a161a7198730eaec2d9d25dd6eadc9cdb58319d5c396f65.png" />
+</div>
+</div>
+</section>
+<section id="correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-divulgacao-para-captas-novas-familias">
+<h2>6.9. Correlação entre quantidade de famílias aptas/acolhendo e divulgação para captas novas famílias<a class="headerlink" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-divulgacao-para-captas-novas-familias" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selecionar as variáveis de divulgação e a variável dependente</span>
+<span class="n">variaveis_divulgacao</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;divulgacao_outdoors_busdoors&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_materiais_grande_circ&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_radio_tv_impressa&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_eventos_palestras&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_redes_sociais&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_articulacao_liderancas&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;divulgacao_outros&#39;</span>
+<span class="p">]</span>
+<span class="n">variavel_dependente</span> <span class="o">=</span> <span class="s1">&#39;qtd_fam_aptas_ou_acolhendo&#39;</span>
+
+<span class="c1"># Filtrar o DataFrame com as colunas relevantes</span>
+<span class="n">df_modelo</span> <span class="o">=</span> <span class="n">df_dados_gerais</span><span class="p">[</span><span class="n">variaveis_divulgacao</span> <span class="o">+</span> <span class="p">[</span><span class="n">variavel_dependente</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Converter &#39;Sim&#39; para 1 e &#39;Não&#39; para 0</span>
+<span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">variaveis_divulgacao</span><span class="p">:</span>
+    <span class="n">df_modelo</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_modelo</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;Sim&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Não&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+
+<span class="c1"># Certificar-se de que as variáveis são numéricas</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_modelo</span><span class="p">[</span><span class="n">variaveis_divulgacao</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_modelo</span><span class="p">[</span><span class="n">variavel_dependente</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="c1"># Adicionar uma constante para o intercepto</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Ajustar o modelo de regressão linear múltipla</span>
+<span class="n">modelo</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Exibir o resumo do modelo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">modelo</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                OLS Regression Results                                
+======================================================================================
+Dep. Variable:     qtd_fam_aptas_ou_acolhendo   R-squared:                       0.070
+Model:                                    OLS   Adj. R-squared:                  0.058
+Method:                         Least Squares   F-statistic:                     6.063
+Date:                        Mon, 30 Dec 2024   Prob (F-statistic):           7.72e-07
+Time:                                09:59:32   Log-Likelihood:                -1982.6
+No. Observations:                         576   AIC:                             3981.
+Df Residuals:                             568   BIC:                             4016.
+Df Model:                                   7                                         
+Covariance Type:                    nonrobust                                         
+=====================================================================================================
+                                        coef    std err          t      P&gt;|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------
+const                                 1.4182      1.035      1.370      0.171      -0.615       3.452
+divulgacao_outdoors_busdoors          0.0277      1.043      0.027      0.979      -2.021       2.076
+divulgacao_materiais_grande_circ     -0.8691      0.745     -1.167      0.244      -2.332       0.594
+divulgacao_radio_tv_impressa          1.4923      0.702      2.126      0.034       0.113       2.871
+divulgacao_eventos_palestras          2.5217      0.710      3.550      0.000       1.127       3.917
+divulgacao_redes_sociais              1.4529      0.930      1.563      0.119      -0.373       3.279
+divulgacao_articulacao_liderancas     0.6953      0.755      0.921      0.357      -0.787       2.178
+divulgacao_outros                     3.6818      1.082      3.403      0.001       1.557       5.807
+==============================================================================
+Omnibus:                      426.777   Durbin-Watson:                   1.645
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6170.968
+Skew:                           3.208   Prob(JB):                         0.00
+Kurtosis:                      17.696   Cond. No.                         8.06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ordenar os coeficientes em termos absolutos (exceto o intercepto)</span>
+<span class="n">coeficientes_sem_intercepto</span> <span class="o">=</span> <span class="n">coeficientes</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;const&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+
+<span class="c1"># Criar o gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">coeficientes_sem_intercepto</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">coeficientes_sem_intercepto</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Blues_r&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">coeficientes_sem_intercepto</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos e títulos</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Importância das Variáveis no Modelo de Regressão&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Valor Absoluto do Coeficiente&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Variáveis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fd4c7a72befb518cd5312d2ecbafb45adf278152dd72d2fcf6ea7eeec8ddace3.png" src="_images/fd4c7a72befb518cd5312d2ecbafb45adf278152dd72d2fcf6ea7eeec8ddace3.png" />
 </div>
 </div>
 </section>
@@ -1524,6 +1996,10 @@ Name: ch_capacitacao_inicial, dtype: float64
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-se-o-numero-e-suficiente">6.3. Correlação entre quantidade de famílias aptas/acolhendo e se o número é suficiente</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-exclusividade-da-equipe-tecnica-do-sfa">6.4. Correlação entre quantidade de famílias aptas/acolhendo e exclusividade da equipe técnica do SFA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-carga-horaria-de-capacitacao-inicial-das-familias">6.5. Correlação entre quantidade de famílias aptas/acolhendo e carga horária de capacitação inicial das famílias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-quantidade-de-criancas-adolescentes-acolhidos">6.6. Correlação entre quantidade de famílias aptas/acolhendo e quantidade de crianças/adolescentes acolhidos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-frequencia-de-acompanhamento-e-quantidade-de-familias-aptas-acolhendo">6.7. Correlação entre frequência de acompanhamento e quantidade de famílias aptas/acolhendo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-frequencia-de-acompanhamento-e-exclusividade-ou-nao-da-equipe-tecnica-do-sfa">6.8. Correlação entre frequência de acompanhamento e exclusividade ou não da equipe técnica do SFA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacao-entre-quantidade-de-familias-aptas-acolhendo-e-divulgacao-para-captas-novas-familias">6.9. Correlação entre quantidade de famílias aptas/acolhendo e divulgação para captas novas famílias</a></li>
 </ul>
   </nav></div>
 
